@@ -6,16 +6,18 @@ interface ButtonProps{
     isActive?: boolean;
     type?:string;
     href?: string;
+    size?: string;
+    clickFunc?: ()=> void;
 }
 
-const Button:React.FC<ButtonProps> = ({text, style, isActive = false, type = "btn", href = ""}) =>{
+const Button:React.FC<ButtonProps> = ({text, style, size, isActive = false, type = "btn", href = "", clickFunc}) =>{
     const styleButton = isActive ? `${type}-active` : `${type}-${style}`
     return(
         <>
         {type == "btn" ?     
-        <button className={`${styleButton}`}>{text}</button>
+        <button className={`${styleButton} ${size}`}>{text}</button>
         : 
-        <a className={`${styleButton}`} href={href}>{text}</a>
+        <a className={`${styleButton} ${size}`} href={href} onClick={clickFunc}>{text}</a>
         }
         </>
     )
