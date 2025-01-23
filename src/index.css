@@ -147,6 +147,7 @@
   text-purple-500
   relative
   before:content-[""]
+  bg-transparent
   before:absolute
   before:-z-10
   before:w-full
@@ -168,6 +169,7 @@
   text-purple-500
   before:content-[""]
   before:absolute
+  bg-transparent
   before:-z-10
   before:w-0
   before:bottom-0
@@ -183,6 +185,7 @@
   relative
   before:content-[""]
   before:absolute
+  bg-transparent
   before:-z-10
   before:w-full
   before:bottom-0

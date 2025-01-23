@@ -37,9 +37,9 @@ const Navbar: React.FC<NavbarProps> = ({func}) => {
   return (
     <>
       <div
-        className={`sticky z-10 top-0 flex flex-row justify-between py-5 px-12 items-center ${
+        className={`sticky z-10 top-0 flex flex-row justify-between py-5 px-24 items-center ${
           isScrolled
-            ? "bg-black/75 transition-color duration-300"
+            ? "bg-black/65 transition-color duration-300"
             : "bg-transparent transition-color duration-300"
         }`}
       >
