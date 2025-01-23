@@ -45,8 +45,8 @@ const Navbar: React.FC<NavbarProps> = ({func}) => {
       >
         <div className="flex flex-col">
           <div className="inline">
-            <span className="link-secondary font-bold">
-                <h2 className="inline-block cursor-default">FPB</h2>
+            <span className="link-secondary font-bold cursor-default">
+                <h2 className="inline-block">FPB</h2>
                 <h6 className="inline-block ml-1 opacity-25 h6 font-bold">DEV</h6>
             </span>
           </div>

@@ -2,7 +2,7 @@ import React, { RefObject, useRef } from "react";
 import Navbar from "../components/Navbar";
 import "../index.css";
 import Section from "../components/Section";
-import Profile from "/profiles.png";
+import Profile from "/profiles.webp";
 import Button from "../components/Button";
 
 interface Ref {
