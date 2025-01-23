@@ -11,11 +11,11 @@ interface ButtonProps{
 }
 
 const Button:React.FC<ButtonProps> = ({text, style, size, isActive = false, type = "btn", href = "", clickFunc}) =>{
-    const styleButton = isActive ? `${type}-active` : `${type}-${style}`
+    const styleButton = isActive ? `${type}-${style}-active` : `${type}-${style}`
     return(
         <>
         {type == "btn" ?     
-        <button className={`${styleButton} ${size}`}>{text}</button>
+        <button className={`${styleButton} ${size}`} onClick={clickFunc}>{text}</button>
         : 
         <a className={`${styleButton} ${size}`} href={href} onClick={clickFunc}>{text}</a>
         }

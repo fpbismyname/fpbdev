@@ -2,7 +2,8 @@ import React, { RefObject, useRef } from "react";
 import Navbar from "../components/Navbar";
 import "../index.css";
 import Section from "../components/Section";
-import Profile from "/public/profile.png";
+import Profile from "/profiles.png";
+import Button from "../components/Button";
 
 interface Ref {
   [key: string]: React.RefObject<HTMLDivElement>;
@@ -23,7 +24,7 @@ const HomePage: React.FC = () => {
     const Ref: RefObject<HTMLDivElement> = section[currentRef];
     const topElementPos: any = Ref.current?.getBoundingClientRect().top;
     window.scrollTo({
-      top: topElementPos + window.scrollY - 170,
+      top: topElementPos + window.scrollY - 171,
       behavior: "smooth",
     });
   };
@@ -37,169 +38,47 @@ const HomePage: React.FC = () => {
     <>
       <div className="flex flex-col gap-[10vh]">
         <Navbar func={BarMenu} />
-        <div className="container mx-auto px-12 flex flex-col gap-96">
+        <div className="container mx-auto px-12 flex flex-col gap-64">
           <Section refSection={section["About"]}>
             <div className="relative">
               <div className="flex flex-row gap-24">
                 <div className="flex flex-col justify-center">
                   <div className="relative">
                     <img className="w-96 object-cover" src={Profile} />
-                    <div className="light-purple"></div>
+                    <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
                   </div>
                 </div>
                 <div className="flex flex-col w-1/2 justify-center">
                   <div className="relative">
-                    <h1 className="h1 mb-5">
-                      Hi, I'm Fajar Perdiansyah Budiman.
+                    <h1 className="h1 mb-2">
+                      Hi, I'm FPB / Fajar Perdiansyah Budiman,
                     </h1>
                     <div className="light-purple"></div>
-                    <p className="h4 opacity-50">
-                        I'm a Web Developer who thrives on crafting seamless
-                        experiences, whether it's designing stunning user interfaces
-                        (Frontend) or building powerful, scalable systems (Backend).
-                        Though I've only been in this field for 5 months, my passion
-                        and dedication drive me to deliver impactful results.
+                    <p className="h4 opacity-50 mb-8">
+                      I am a website developer who can help you in creating a web on the front side. In creating websites I have 1 year of experience in fullstack website development, website designer, user testing, and UX design. My dedication and passion will bring a useful impact in website development.
                     </p>
+                    <Button text="Next >>>" style="primary" clickFunc={() =>BarMenu.Skills()} type="btn"/>
                   </div>
                 </div>
               </div>
             </div>
           </Section>
-          <Section refSection={section["Portfolio"]}>
+          <Section refSection={section["Skills"]}>
             <div className="relative">
               <div className="flex flex-row gap-24">
                 <div className="flex flex-col justify-center">
                   <div className="relative">
-                    <img className="w-96 object-cover" src={Profile} />
-                    <div className="light-purple"></div>
+
                   </div>
                 </div>
                 <div className="flex flex-col w-1/2 justify-center">
                   <div className="relative">
-                    <h1 className="h1 mb-5">
-                      Hi, I'm Fajar Perdiansyah Budiman.
-                    </h1>
-                    <div className="light-purple"></div>
-                    <p className="h4 opacity-50">
-                        I'm a Web Developer who thrives on crafting seamless
-                        experiences, whether it's designing stunning user interfaces
-                        (Frontend) or building powerful, scalable systems (Backend).
-                        Though I've only been in this field for 5 months, my passion
-                        and dedication drive me to deliver impactful results.
-                    </p>
+
                   </div>
                 </div>
               </div>
             </div>
           </Section>
-          <Section refSection={section["adads"]}>
-            <div className="relative">
-              <div className="flex flex-row gap-24">
-                <div className="flex flex-col justify-center">
-                  <div className="relative">
-                    <img className="w-96 object-cover" src={Profile} />
-                    <div className="light-purple"></div>
-                  </div>
-                </div>
-                <div className="flex flex-col w-1/2 justify-center">
-                  <div className="relative">
-                    <h1 className="h1 mb-5">
-                      Hi, I'm Fajar Perdiansyah Budiman.
-                    </h1>
-                    <div className="light-purple"></div>
-                    <p className="h4 opacity-50">
-                        I'm a Web Developer who thrives on crafting seamless
-                        experiences, whether it's designing stunning user interfaces
-                        (Frontend) or building powerful, scalable systems (Backend).
-                        Though I've only been in this field for 5 months, my passion
-                        and dedication drive me to deliver impactful results.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Section>
-          <Section refSection={section["adads"]}>
-            <div className="relative">
-              <div className="flex flex-row gap-24">
-                <div className="flex flex-col justify-center">
-                  <div className="relative">
-                    <img className="w-96 object-cover" src={Profile} />
-                    <div className="light-purple"></div>
-                  </div>
-                </div>
-                <div className="flex flex-col w-1/2 justify-center">
-                  <div className="relative">
-                    <h1 className="h1 mb-5">
-                      Hi, I'm Fajar Perdiansyah Budiman.
-                    </h1>
-                    <div className="light-purple"></div>
-                    <p className="h4 opacity-50">
-                        I'm a Web Developer who thrives on crafting seamless
-                        experiences, whether it's designing stunning user interfaces
-                        (Frontend) or building powerful, scalable systems (Backend).
-                        Though I've only been in this field for 5 months, my passion
-                        and dedication drive me to deliver impactful results.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Section>
-          <Section refSection={section["adads"]}>
-            <div className="relative">
-              <div className="flex flex-row gap-24">
-                <div className="flex flex-col justify-center">
-                  <div className="relative">
-                    <img className="w-96 object-cover" src={Profile} />
-                    <div className="light-purple"></div>
-                  </div>
-                </div>
-                <div className="flex flex-col w-1/2 justify-center">
-                  <div className="relative">
-                    <h1 className="h1 mb-5">
-                      Hi, I'm Fajar Perdiansyah Budiman.
-                    </h1>
-                    <div className="light-purple"></div>
-                    <p className="h4 opacity-50">
-                        I'm a Web Developer who thrives on crafting seamless
-                        experiences, whether it's designing stunning user interfaces
-                        (Frontend) or building powerful, scalable systems (Backend).
-                        Though I've only been in this field for 5 months, my passion
-                        and dedication drive me to deliver impactful results.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Section>
-            <Section refSection={section["adads"]}>
-                <div className="relative">
-                <div className="flex flex-row gap-24">
-                    <div className="flex flex-col justify-center">
-                    <div className="relative">
-                        <img className="w-96 object-cover" src={Profile} />
-                        <div className="light-purple"></div>
-                    </div>
-                    </div>
-                    <div className="flex flex-col w-1/2 justify-center">
-                    <div className="relative">
-                        <h1 className="h1 mb-5">
-                        Hi, I'm Fajar Perdiansyah Budiman.
-                        </h1>
-                        <div className="light-purple"></div>
-                        <p className="h4 opacity-50">
-                            I'm a Web Developer who thrives on crafting seamless
-                            experiences, whether it's designing stunning user interfaces
-                            (Frontend) or building powerful, scalable systems (Backend).
-                            Though I've only been in this field for 5 months, my passion
-                            and dedication drive me to deliver impactful results.
-                        </p>
-                    </div>
-                    </div>
-                </div>
-                </div>
-            </Section>
         </div>
       </div>
     </>

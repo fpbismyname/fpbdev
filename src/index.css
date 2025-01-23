@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -55,6 +56,14 @@
   }
 }
 
+
+/*  =================
+    |Button styling |
+    =================
+*/
+*{
+  font-family: "Open Sans";
+}
 /*  =================
     |Button styling |
     =================
@@ -120,37 +129,71 @@
 /* secondary button */
 .link-primary{
   @apply
+  relative
   text-purple-500
+  before:content-[""]
+  before:absolute
+  before:-z-10
+  before:w-0
+  before:bottom-0
+  before:h-0.5
+  before:bg-purple-500
+  before:transition-all
   transition-all
   duration-200
 }
 .link-primary-active{
   @apply
-  bg-purple-300
+  text-purple-500
+  relative
+  before:content-[""]
+  before:absolute
+  before:-z-10
+  before:w-full
+  before:bottom-0
+  before:h-0.5
+  before:bg-purple-500
+  before:transition-all
   transition-all
 }
 .link-primary:hover{
   @apply
-  bg-purple-300
-  shadow-[0_0_50px_rgba(216,170,255,0.7)]
+  before:w-full
 }
 
 /* secondary button */
 .link-secondary{
   @apply
-  text-white
+  relative
+  text-purple-500
+  before:content-[""]
+  before:absolute
+  before:-z-10
+  before:w-0
+  before:bottom-0
+  before:h-0.5
+  before:bg-white
+  before:transition-all
   transition-all
   duration-200
 }
 .link-secondary-active{
   @apply
-  bg-white/50
+  text-white
+  relative
+  before:content-[""]
+  before:absolute
+  before:-z-10
+  before:w-full
+  before:bottom-0
+  before:h-0.5
+  before:bg-white
+  before:transition-all
   transition-all
 }
 .link-secondary:hover{
   @apply
-  bg-white/50
-  shadow-[0_0_50px_rgba(255,255,255,0.7)]
+  before:w-full
 }
 
 /*  ==============

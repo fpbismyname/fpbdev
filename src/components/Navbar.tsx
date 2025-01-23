@@ -44,10 +44,10 @@ const Navbar: React.FC<NavbarProps> = ({func}) => {
         }`}
       >
         <div className="flex flex-col">
-          <div className="inline-block">
-            <span>
-                <Button text="FPB" style="secondary" type="link" href="#" size="h1"/>
-                <h6 className="inline-block ml-1 opacity-25 h5">DEV</h6>
+          <div className="inline">
+            <span className="link-secondary font-bold">
+                <h2 className="inline-block cursor-default">FPB</h2>
+                <h6 className="inline-block ml-1 opacity-25 h6 font-bold">DEV</h6>
             </span>
           </div>
         </div>
@@ -58,10 +58,10 @@ const Navbar: React.FC<NavbarProps> = ({func}) => {
               />
             </li>
             <li>
-              <Button text="Portofolio" size="h3" style="primary" type="link" clickFunc={()=>HandleClick("Porto")}/>
+              <Button text="Skills" size="h3" style="primary" type="link" clickFunc={()=>HandleClick("Skills")}/>
             </li>
             <li>
-              <Button text="Skills" size="h3" style="primary" type="link" clickFunc={()=>HandleClick("Skills")}/>
+              <Button text="Portfolio" size="h3" style="primary" type="link" clickFunc={()=>HandleClick("Porto")}/>
             </li>
             <li>
               <Button text="Contact" size="h3" style="primary" type="link" clickFunc={()=>HandleClick("Contact")}/>
