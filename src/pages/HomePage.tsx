@@ -13,6 +13,7 @@ type FuncRef = {
 };
 
 const HomePage: React.FC = () => {
+  const currentYear = new Date().getFullYear()
   const section: Ref = {
     About: useRef<HTMLDivElement>(null),
     Portfolio: useRef<HTMLDivElement>(null),
@@ -62,7 +63,7 @@ const HomePage: React.FC = () => {
                     a useful impact in website development.
                   </p>
                   <Button
-                    text="Next >>>"
+                    text="Check my skill >>>"
                     style="primary"
                     clickFunc={() => BarMenu.Skills()}
                     type="btn"
@@ -119,7 +120,7 @@ const HomePage: React.FC = () => {
             <div className="flex flex-row w-full py-12">
               <div className="flex flex-col w-full items-center text-center gap-10">
                 <Button
-                  text="Next >>>"
+                  text="Check my portfolio >>>"
                   style="primary"
                   type="btn"
                   clickFunc={() => BarMenu.Porto()}
@@ -226,7 +227,7 @@ const HomePage: React.FC = () => {
                 <div className="relative w-2/3">
                   <div className="light-purple"></div>
                   <p className="h3 opacity-50">
-                  Contact me for more information.
+                    Contact me for more information.
                   </p>
                 </div>
               </div>
@@ -234,24 +235,48 @@ const HomePage: React.FC = () => {
             <div className="flex flex-row flex-wrap w-full p-10 gap-12 justify-center">
               <div className="flex flex-row w-1/4 items-center justify-center gap-8">
                 <div className="relative flex flex-col gap-2">
-                  <Button style="primary" type="link" href="https://www.linkedin.com/in/fajar-perdiansyah-budiman-b28217312/">
+                  <Button
+                    style="primary"
+                    type="link"
+                    href="https://www.linkedin.com/in/fajar-perdiansyah-budiman-b28217312/"
+                  >
                     <i className="fa-brands fa-linkedin text-primary"></i>
                   </Button>
                 </div>
                 <div className="relative flex flex-col gap-2">
-                  <Button style="primary" type="link" href="https://github.com/fpbismyname">
+                  <Button
+                    style="primary"
+                    type="link"
+                    href="https://github.com/fpbismyname"
+                  >
                     <i className="fa-brands fa-github text-primary"></i>
                   </Button>
                 </div>
                 <div className="relative flex flex-col gap-2">
-                  <Button style="primary" type="link" href="https://www.instagram.com/fpb_vfx/">
+                  <Button
+                    style="primary"
+                    type="link"
+                    href="https://www.instagram.com/fpb_vfx/"
+                  >
                     <i className="fa-brands fa-instagram text-primary"></i>
                   </Button>
                 </div>
                 <div className="relative flex flex-col gap-2">
-                  <Button style="primary" type="link" href="https://x.com/VFPBV">
+                  <Button
+                    style="primary"
+                    type="link"
+                    href="https://x.com/VFPBV"
+                  >
                     <i className="bi bi-twitter-x text-primary"></i>
                   </Button>
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row w-full py-4">
+              <div className="flex flex-col w-full items-center text-center">
+                <div className="relative w-2/3">
+                  <div className="light-purple"></div>
+                  <p className="h6 opacity-50">© {currentYear} FPB-DEV</p>
                 </div>
               </div>
             </div>
