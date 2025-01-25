@@ -55,10 +55,41 @@
     font-thin
   }
 }
+/*  =================
+    |Scroll bar     |
+    =================
+*/
+::-webkit-scrollbar{
+  @apply
+  w-1
+  h-2
+}
+
+::-webkit-scrollbar-thumb{
+  @apply
+  bg-purple-500/25
+  rounded-full
+}
+::-webkit-scrollbar-thumb:hover{
+  @apply
+  bg-purple-500
+}
 
 
 /*  =================
-    |Button styling |
+    |color style    |
+    =================
+*/
+.bg-primary{
+  @apply
+  bg-purple-500
+}
+.text-primary{
+  @apply
+  text-purple-500
+}
+/*  =================
+    |Font style |
     =================
 */
 *{
@@ -166,7 +197,7 @@
 .link-secondary{
   @apply
   relative
-  text-purple-500
+  text-white
   before:content-[""]
   before:absolute
   bg-transparent
@@ -219,4 +250,17 @@
   blur-[100px]
   -z-10
   bg-purple-500/50
+}
+
+.light-white{
+  @apply
+  absolute
+  /* rounded-full */
+  top-0
+  left-0
+  w-full
+  h-full
+  blur-[100px]
+  -z-10
+  bg-white/50
 }
