@@ -9,9 +9,12 @@
     scroll-smooth
     antialiased
     outline-none
+    select-none
   }
   body{
-    @apply 
+    @apply
+    outline-none
+    select-none
     bg-black
     overflow-x-hidden
   }
