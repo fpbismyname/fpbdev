@@ -40,22 +40,24 @@ const HomePage: React.FC = () => {
     <>
       <div className="flex flex-col gap-[10vh]">
         <Navbar func={BarMenu} />
-        <div className="container mx-auto px-12 flex flex-col gap-64">
+        <div className="container mx-auto px-0 md:px-12 flex flex-col gap-64">
+
+          {/* About */}
           <Section refSection={section["About"]} flexType="flex-row">
-            <div className="flex flex-row gap-24">
-              <div className="flex flex-col justify-center">
+            <div className="flex flex-col md:flex-row md:gap-16 gap-12 justify-center">
+              <div className="flex md:flex-col justify-center">
                 <div className="relative">
-                  <img className="w-96 object-cover" src={Profile} />
+                  <img className="md:w-64 xl:96 object-cover" src={Profile} />
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
                 </div>
               </div>
-              <div className="flex flex-col w-1/2 justify-center">
+              <div className="flex md:flex-col md:w-1/2 justify-center text-center md:text-justify">
                 <div className="relative">
-                  <h1 className="h1 mb-2">
+                  <h1 className="h5 md:h2 mb-2">
                     Hi, I'm FPB / Fajar Perdiansyah Budiman,
                   </h1>
                   <div className="light-purple"></div>
-                  <p className="h4 opacity-50 mb-8">
+                  <p className="h6 md:h5 opacity-50 mb-8 text-justify">
                     I am a website developer who can help you create a website.
                     In creating websites, I have 1 year of experience in
                     fullstack website development, website designer, user
@@ -72,23 +74,25 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </Section>
+
+          {/* Skills */}
           <Section refSection={section["Skills"]} flexType="flex-col">
-            <div className="flex flex-row w-full py-12">
+            <div className="flex flex-col md:flex-row w-full py-12">
               <div className="flex flex-col w-full items-center text-center gap-10">
-                <div className="relative w-2/3">
+                <div className="relative md:w-2/3">
                   <div className="light-purple"></div>
-                  <p className="h3 opacity-50">
+                  <p className="h5 md:h3 opacity-50">
                     These are some of the skills that I have mastered in
                     dedicating myself to the field of website development.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full gap-24">
-              <div className="flex flex-col w-full items-end">
+            <div className="flex flex-col md:flex-row w-full md:gap-24 gap-12">
+              <div className="flex flex-col w-full items-center md:items-end">
                 <div className="relative">
                   <div className="light-purple animate-[spin_3s_linear_infinite]"></div>
-                  <h1 className="h3">
+                  <h1 className="h5 md:h3">
                     <i className="fa-solid fa-briefcase mr-2"></i>Hard skills
                   </h1>
                   <ul className="*:h6 opacity-50 py-6">
@@ -101,7 +105,7 @@ const HomePage: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              <div className="flex flex-col w-full items-start">
+              <div className="flex flex-col w-full items-center  md:items-start">
                 <div className="relative">
                   <div className="light-purple animate-[spin_3s_linear_infinite]"></div>
                   <h1 className="h3">
@@ -117,7 +121,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-row w-full py-12">
+            <div className="flex flex-col md:flex-row w-full py-12">
               <div className="flex flex-col w-full items-center text-center gap-10">
                 <Button
                   text="Check my portfolio >>>"
@@ -128,23 +132,25 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </Section>
+
+          {/* Portfolio */}
           <Section refSection={section["Portfolio"]} flexType="flex-col">
             <div className="flex flex-row w-full py-12">
               <div className="flex flex-col w-full items-center text-center gap-10">
                 <div className="relative w-2/3">
                   <div className="light-purple"></div>
-                  <p className="h3 opacity-50">
+                  <p className="h5 md:h3 opacity-50">
                     These are some of the projects I have completed in website
                     development.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-row flex-wrap w-full p-10 gap-12 justify-center">
-              <div className="flex flex-col w-1/4 items-center">
+            <div className="flex flex-col items-center text-center md:text-left md:items-start md:flex-row flex-wrap w-full md:p-10 gap-12 justify-center">
+              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
-                  <h1 className="h3">Requirement management Tools</h1>
+                  <h1 className="h5 md:h4 xl:h3">Requirement management Tools</h1>
                   <p className="h6 opacity-50">
                     a website to manage development requests, such as bugs,
                     feature requests, interface design, website system
@@ -161,10 +167,10 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-1/4 items-center">
+              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
-                  <h1 className="h3">Carbon emissions management</h1>
+                  <h1 className="h5 md:h4 xl:h3">Carbon emissions management</h1>
                   <p className="h6 opacity-50">
                     a website for managing carbon emissions arising from a
                     specific activity within the company's scope, or more
@@ -180,10 +186,10 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-1/4 items-center">
+              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
-                  <h1 className="h3">Check your khodam</h1>
+                  <h1 className="h5 md:h4 xl:h3">Check your khodam</h1>
                   <p className="h6 opacity-50">
                     a website for checking spiritual beings such as khodam, this
                     website is made just for fun.
@@ -199,10 +205,10 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-1/4 items-center">
+              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
-                  <h1 className="h3">CV. Berkah Jaya Cianjur</h1>
+                  <h1 className="h5 md:h4 xl:h3">CV. Berkah Jaya Cianjur</h1>
                   <p className="h6 opacity-50">
                     Building construction website, promoting reliable builders
                     in Indonesia, with workers who are persistent, strong, and
@@ -221,18 +227,20 @@ const HomePage: React.FC = () => {
               </div>
             </div>
           </Section>
+
+          {/* Contact */}
           <Section refSection={section["Contact"]} flexType="flex-col">
-            <div className="flex flex-row w-full py-4">
+            <div className="flex flex-row w-full md:py-4">
               <div className="flex flex-col w-full items-center text-center">
                 <div className="relative w-2/3">
                   <div className="light-purple"></div>
-                  <p className="h3 opacity-50">
+                  <p className="h5 md:h3 opacity-50">
                     Contact me for more information.
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex flex-row flex-wrap w-full p-10 gap-12 justify-center">
+            <div className="flex flex-row flex-wrap w-full p-5 md:p-10 gap-12 justify-center">
               <div className="flex flex-row w-1/4 items-center justify-center gap-8">
                 <div className="relative flex flex-col gap-2">
                   <Button
