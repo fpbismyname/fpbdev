@@ -147,7 +147,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             <div className="flex flex-col items-center text-center md:text-left md:items-start md:flex-row flex-wrap w-full md:p-10 gap-12 justify-center">
-              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
+              <div className="flex flex-col w-10/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
                   <h1 className="h5 md:h4 xl:h3">Requirement management Tools</h1>
@@ -167,7 +167,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
+              <div className="flex flex-col w-10/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
                   <h1 className="h5 md:h4 xl:h3">Carbon emissions management</h1>
@@ -186,7 +186,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
+              <div className="flex flex-col w-10/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
                   <h1 className="h5 md:h4 xl:h3">Check your khodam</h1>
@@ -205,7 +205,7 @@ const HomePage: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col w-7/12 md:w-1/4 items-center">
+              <div className="flex flex-col w-10/12 md:w-1/4 items-center">
                 <div className="relative flex flex-col gap-2">
                   <div className="light-purple animate-[pulse_3s_linear_infinite]"></div>
                   <h1 className="h5 md:h4 xl:h3">CV. Berkah Jaya Cianjur</h1>
