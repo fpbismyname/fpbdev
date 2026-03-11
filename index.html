@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPBDEV | Portofolio & Solusi Web Bisnis</title>
+    <meta name="description" content="Jasa pembuatan website freelance profesional. Cepat, stabil, SEO friendly, dan fokus pada konversi bisnis Anda.">
+    
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .swiper { width: 100%; padding-bottom: 50px !important; }
+        .swiper-pagination-bullet-active { background: #570df8 !important; }
+    </style>
+</head>
+<body>
+
+    <div class="drawer">
+        <input id="mobile-drawer" type="checkbox" class="drawer-toggle" /> 
+        
+        <div class="drawer-content flex flex-col">
+            <header class="sticky top-0 z-50 w-full bg-base-100/80 backdrop-blur-md border-b border-base-200">
+                <nav class="navbar max-w-7xl mx-auto px-4">
+                    <div class="flex-none lg:hidden">
+                        <label for="mobile-drawer" class="btn btn-ghost btn-square">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-6 h-6 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                        </label>
+                    </div> 
+                    
+                    <div class="flex-1 px-2 mx-2">
+                        <a href="#" class="text-2xl font-bold tracking-tighter text-primary">FPBDEV</a>
+                    </div>
+                    
+                    <div class="flex-none hidden lg:block">
+                        <ul class="menu menu-horizontal px-1 font-medium gap-2">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#testimonials">Testimonials</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="flex-none hidden lg:block ml-4">
+                        <a href="#contact" class="btn btn-primary rounded-xl px-8 shadow-md">Hubungi Kami</a>
+                    </div>
+                </nav>
+            </header>
+
+            <section id="hero" class="py-16 md:py-24 bg-base-100">
+                <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-12">
+                    <div class="space-y-8 text-center md:text-left">
+                        <div class="badge badge-outline badge-primary p-4 font-semibold uppercase tracking-widest text-xs italic">Expert Web Development</div>
+                        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+                            Premium <span class="text-primary">Freelance Developer</span> untuk Bisnis Modern
+                        </h1>
+                        <p class="text-xl text-base-content/70 max-w-lg mx-auto md:mx-0">
+                            Website cepat, stabil, dan siap online untuk kebutuhan bisnis anda. Fokus pada performa dan konversi pelanggan.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                            <a href="#contact" class="btn btn-primary btn-lg rounded-xl shadow-lg">Konsultasi Gratis</a>
+                            <a href="#projects" class="btn btn-outline btn-lg rounded-xl">Lihat Portfolio</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1000" alt="Freelance Developer Workflow" class="rounded-3xl shadow-2xl transition duration-500 group-hover:scale-[1.02] aspect-video md:aspect-square object-cover" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="py-20 bg-base-200">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Why Choose Us</h2>
+                        <div class="h-1 w-20 bg-primary mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card bg-base-100 shadow-sm hover:shadow-xl transition-all duration-300 rounded-xl border border-base-300">
+                            <div class="card-body">
+                                <div class="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                </div>
+                                <h3 class="card-title text-xl font-bold">Ultra Fast Loading</h3>
+                                <p class="text-base-content/70">Optimasi performa Core Web Vitals untuk memastikan user tidak kabur karena website lambat.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-sm hover:shadow-xl transition-all duration-300 rounded-xl border border-base-300">
+                            <div class="card-body">
+                                <div class="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04kM12 21.48l.342-1.61c.635-2.993 2.4-5.48 4.925-6.852l1.633-.89" /></svg>
+                                </div>
+                                <h3 class="card-title text-xl font-bold">SEO Friendly</h3>
+                                <p class="text-base-content/70">Struktur kode yang rapi agar bisnis Anda lebih mudah ditemukan oleh calon pelanggan di Google.</p>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-sm hover:shadow-xl transition-all duration-300 rounded-xl border border-base-300">
+                            <div class="card-body">
+                                <div class="w-12 h-12 bg-primary/10 text-primary flex items-center justify-center rounded-lg mb-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                                </div>
+                                <h3 class="card-title text-xl font-bold">Conversion Focus</h3>
+                                <p class="text-base-content/70">Desain yang memandu pengunjung menjadi pembeli dengan CTA yang strategis dan user journey yang tepat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="py-20 bg-base-100">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="text-center mb-16">
+                        <h2 class="text-4xl font-bold mb-4">Latest Projects</h2>
+                        <p class="opacity-60">Beberapa karya terbaru yang membantu klien mencapai tujuan digital mereka.</p>
+                    </div>
+
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="card bg-base-100 shadow-xl m-2 rounded-2xl overflow-hidden border border-base-300">
+                                    <figure><img src="https://images.unsplash.com/photo-1556740734-7f9583450c61?auto=format&fit=crop&q=80&w=800" class="aspect-video object-cover" alt="E-Commerce Project" /></figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title font-bold">Asteria Florist</h3>
+                                        <p class="text-sm opacity-70">Sistem katalog interaktif dan manajemen pesanan untuk bisnis bunga lokal.</p>
+                                        <div class="card-actions justify-start mt-2">
+                                            <div class="badge badge-outline">Next.js</div>
+                                            <div class="badge badge-outline">Tailwind</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card bg-base-100 shadow-xl m-2 rounded-2xl overflow-hidden border border-base-300">
+                                    <figure><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&q=80&w=800" class="aspect-video object-cover" alt="Cafe Web" /></figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title font-bold">Warung Teh Deti</h3>
+                                        <p class="text-sm opacity-70">Website profil bisnis kuliner dengan optimasi SEO lokal di Cianjur.</p>
+                                        <div class="card-actions justify-start mt-2">
+                                            <div class="badge badge-outline">Astro JS</div>
+                                            <div class="badge badge-outline">DaisyUI</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="card bg-base-100 shadow-xl m-2 rounded-2xl overflow-hidden border border-base-300">
+                                    <figure><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800" class="aspect-video object-cover" alt="SaaS Dashboard" /></figure>
+                                    <div class="card-body">
+                                        <h3 class="card-title font-bold">Inventory System</h3>
+                                        <p class="text-sm opacity-70">Aplikasi manajemen stok internal perusahaan dengan dashboard analitik real-time.</p>
+                                        <div class="card-actions justify-start mt-2">
+                                            <div class="badge badge-outline">Laravel</div>
+                                            <div class="badge badge-outline">MySQL</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="services" class="py-20 bg-base-200">
+                <div class="max-w-7xl mx-auto px-4">
+                    <div class="mb-16">
+                        <h2 class="text-4xl font-bold">Layanan Utama</h2>
+                        <p class="text-lg text-base-content/60 mt-2">Solusi digital untuk skala bisnis apapun.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card bg-base-100 shadow-xl overflow-hidden group">
+                            <figure><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="Landing Page Service" class="group-hover:scale-110 transition duration-500 aspect-square object-cover" /></figure>
+                            <div class="card-body">
+                                <h3 class="card-title uppercase text-sm text-primary">Single Page</h3>
+                                <p class="text-xl font-bold">High-Converting Landing Page</p>
+                                <p class="text-base-content/70">Cocok untuk promosi produk spesifik atau jasa yang membutuhkan konversi cepat.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <button class="btn btn-primary btn-block rounded-lg">Pesan Sekarang</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-xl overflow-hidden group border-2 border-primary">
+                            <figure><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800" alt="E-Catalog Service" class="group-hover:scale-110 transition duration-500 aspect-square object-cover" /></figure>
+                            <div class="card-body">
+                                <h3 class="card-title uppercase text-sm text-primary">Digital Display</h3>
+                                <p class="text-xl font-bold">Online Product Catalog</p>
+                                <p class="text-base-content/70">Pamerkan katalog produk Anda secara profesional dan elegan untuk menjangkau pasar lebih luas.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <button class="btn btn-primary btn-block rounded-lg shadow-lg">Paling Populer</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-100 shadow-xl overflow-hidden group">
+                            <figure><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800" alt="Custom Dev Service" class="group-hover:scale-110 transition duration-500 aspect-square object-cover" /></figure>
+                            <div class="card-body">
+                                <h3 class="card-title uppercase text-sm text-primary">Full Stack</h3>
+                                <p class="text-xl font-bold">Custom Web Application</p>
+                                <p class="text-base-content/70">Sistem web kustom yang dirancang khusus untuk memecahkan masalah operasional bisnis Anda.</p>
+                                <div class="card-actions justify-end mt-4">
+                                    <button class="btn btn-primary btn-block rounded-lg">Konsultasi</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials" class="py-20 bg-base-100">
+                <div class="max-w-7xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold text-center mb-16">Apa Kata Klien Kami</h2>
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="card bg-base-200 p-8 shadow-md rounded-2xl italic border-l-4 border-primary">
+                            <p class="text-lg">"Website buatan FPBDEV sangat cepat. Konversi penjualan produk saya naik 40% dalam sebulan!"</p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div class="avatar">
+                                    <div class="w-12 rounded-full">
+                                        <img src="https://i.pravatar.cc/150?u=1" alt="Avatar" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Andi Wijaya</p>
+                                    <p class="text-sm opacity-60">Owner Kedai Kopi</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-200 p-8 shadow-md rounded-2xl italic border-l-4 border-primary">
+                            <p class="text-lg">"Akhirnya punya katalog online yang rapi. Pelanggan jadi lebih gampang lihat-lihat produk lewat HP."</p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div class="avatar">
+                                    <div class="w-12 rounded-full">
+                                        <img src="https://i.pravatar.cc/150?u=2" alt="Avatar" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Siti Aminah</p>
+                                    <p class="text-sm opacity-60">UMKM Fashion</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card bg-base-200 p-8 shadow-md rounded-2xl italic border-l-4 border-primary">
+                            <p class="text-lg">"Sangat responsif dan komunikatif. Hasil akhir melebihi ekspektasi, kodenya bersih dan mudah dikelola."</p>
+                            <div class="flex items-center gap-4 mt-8">
+                                <div class="avatar">
+                                    <div class="w-12 rounded-full">
+                                        <img src="https://i.pravatar.cc/150?u=3" alt="Avatar" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="font-bold">Budi Santoso</p>
+                                    <p class="text-sm opacity-60">CEO Startup Logistik</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="py-20 bg-base-200">
+                <div class="max-w-3xl mx-auto px-4">
+                    <h2 class="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="collapse collapse-plus bg-base-100 rounded-xl shadow-sm border border-base-300">
+                            <input type="radio" name="my-accordion-3" checked="checked" /> 
+                            <div class="collapse-title text-xl font-medium italic">Berapa lama proses pembuatan satu website?</div>
+                            <div class="collapse-content text-base-content/70">
+                                <p>Tergantung kompleksitas. Untuk landing page sederhana biasanya memakan waktu 3-7 hari kerja, sedangkan sistem katalog atau custom dev bisa 2-4 minggu.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-100 rounded-xl shadow-sm border border-base-300">
+                            <input type="radio" name="my-accordion-3" /> 
+                            <div class="collapse-title text-xl font-medium italic">Apakah sudah termasuk biaya hosting dan domain?</div>
+                            <div class="collapse-content text-base-content/70">
+                                <p>Paket layanan kami bisa disesuaikan. Kami menyediakan paket "siap online" yang sudah mencakup setup hosting dan pendaftaran domain selama 1 tahun.</p>
+                            </div>
+                        </div>
+                        <div class="collapse collapse-plus bg-base-100 rounded-xl shadow-sm border border-base-300">
+                            <input type="radio" name="my-accordion-3" /> 
+                            <div class="collapse-title text-xl font-medium italic">Apakah website bisa saya edit sendiri nantinya?</div>
+                            <div class="collapse-content text-base-content/70">
+                                <p>Ya! Kami menyediakan dokumentasi atau sesi training singkat agar Anda bisa mengubah konten teks dan gambar secara mandiri.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="py-20 px-4 bg-base-100">
+                <div class="max-w-5xl mx-auto bg-primary text-primary-content rounded-3xl p-12 text-center shadow-2xl relative overflow-hidden">
+                    <div class="relative z-10">
+                        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">Siap Membuat Bisnis Anda Go-Digital?</h2>
+                        <p class="text-xl opacity-90 mb-10 max-w-2xl mx-auto">Klik tombol di bawah untuk mulai diskusi dan dapatkan penawaran harga terbaik untuk proyek Anda.</p>
+                        <a href="https://wa.me/yournumber" class="btn btn-secondary btn-lg rounded-full px-12 shadow-xl hover:scale-105 transition transform">Hubungi Via WhatsApp Sekarang</a>
+                    </div>
+                    <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+                </div>
+            </section>
+
+            <footer class="footer p-10 bg-neutral text-neutral-content py-20">
+                <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 w-full">
+                    <nav class="flex flex-col gap-4">
+                        <span class="text-2xl font-bold text-white tracking-tighter">FPBDEV</span>
+                        <p class="text-sm opacity-70">Membangun ekosistem digital yang tangguh untuk membantu UMKM dan bisnis lokal berkembang pesat di dunia internet.</p>
+                    </nav> 
+                    <nav class="flex flex-col gap-2">
+                        <h6 class="footer-title opacity-100 text-white">Navigation</h6> 
+                        <a class="link link-hover" href="#hero">Home</a>
+                        <a class="link link-hover" href="#features">Features</a>
+                        <a class="link link-hover" href="#projects">Projects</a>
+                        <a class="link link-hover" href="#services">Services</a>
+                        <a class="link link-hover" href="#faq">FAQ</a>
+                    </nav> 
+                    <nav class="flex flex-col gap-2">
+                        <h6 class="footer-title opacity-100 text-white">Contact Info</h6> 
+                        <p class="text-sm">Email: hello@fpbdev.com</p>
+                        <p class="text-sm">WhatsApp: +62 812-3456-7890</p>
+                        <p class="text-sm">Lokasi: Jakarta, Indonesia</p>
+                    </nav> 
+                    <nav>
+                        <h6 class="footer-title opacity-100 text-white">Social Media</h6> 
+                        <div class="grid grid-flow-col gap-4">
+                            <a class="hover:text-primary transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.599 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg>
+                            </a>
+                            <a class="hover:text-primary transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg>
+                            </a>
+                            <a class="hover:text-primary transition-colors cursor-pointer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg>
+                            </a>
+                        </div>
+                    </nav>
+                </div>
+            </footer>
+            
+            <div class="text-center py-6 bg-neutral border-t border-white/5 text-sm opacity-50 text-neutral-content">
+                <p>© 2026 FPBDEV. All rights reserved.</p>
+            </div>
+        </div> 
+
+        <div class="drawer-side z-[60]">
+            <label for="mobile-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu p-6 w-80 min-h-full bg-base-100 text-base-content font-medium text-lg space-y-2">
+                <li class="mb-8"><a href="#" class="text-2xl font-bold text-primary">FPBDEV</a></li>
+                <li><a href="#hero" onclick="document.getElementById('mobile-drawer').checked = false">Home</a></li>
+                <li><a href="#features" onclick="document.getElementById('mobile-drawer').checked = false">Features</a></li>
+                <li><a href="#projects" onclick="document.getElementById('mobile-drawer').checked = false">Projects</a></li>
+                <li><a href="#services" onclick="document.getElementById('mobile-drawer').checked = false">Services</a></li>
+                <li><a href="#testimonials" onclick="document.getElementById('mobile-drawer').checked = false">Testimonials</a></li>
+                <li><a href="#faq" onclick="document.getElementById('mobile-drawer').checked = false">FAQ</a></li>
+                <div class="divider"></div>
+                <li><a href="#contact" class="btn btn-primary text-white mt-4" onclick="document.getElementById('mobile-drawer').checked = false">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="./script.js"></script>
+</body>
+</html>
