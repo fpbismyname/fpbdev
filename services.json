@@ -1,0 +1,57 @@
+[
+  {
+    "id": "landing-page",
+    "name": "Landing Page",
+    "tagline": "Convert pengunjung jadi pelanggan",
+    "description": "Halaman tunggal yang dirancang khusus untuk mengkonversi pengunjung menjadi pelanggan. Cocok untuk bisnis yang ingin fokus pada satu produk atau layanan utama.",
+    "price": 900000,
+    "duration": "3-5 hari",
+    "features": [
+      "Desain responsif (mobile-friendly)",
+      "Optimasi SEO on-page",
+      "Integrasi WhatsApp",
+      "Google Analytics terpasang",
+      "Form kontak",
+      "Revisi 2x"
+    ],
+    "highlight": true,
+    "icon": "arrow-trending-up"
+  },
+  {
+    "id": "katalog",
+    "name": "Website Katalog",
+    "tagline": "Tampilkan produk tanpa batas",
+    "description": "Katalog online yang memungkinkan pelanggan melihat dan mencari produk Anda dengan mudah. Cocok untuk bisnis retail, distro, atau toko online yang belum butuh sistem pembayaran.",
+    "price": 1500000,
+    "duration": "7-10 hari",
+    "features": [
+      "Produk unlimited",
+      "Kategori produk",
+      "Fitur pencarian",
+      "Admin panel lengkap",
+      "Desain responsif",
+      "Revisi 3x"
+    ],
+    "highlight": false,
+    "icon": "rectangle-stack"
+  },
+  {
+    "id": "company-profile",
+    "name": "Company Profile",
+    "tagline": "Presentasikan bisnis dengan profesional",
+    "description": "Website lengkap yang menampilkan identitas perusahaan, layanan, portofolio, dan informasi kontak. Cocok untuk bisnis B2B, konsultan, agency, atau perusahaan yang ingin terlihat profesional.",
+    "price": 2500000,
+    "duration": "10-14 hari",
+    "features": [
+      "Halaman tentang kami",
+      "Halaman layanan",
+      "Galeri portofolio",
+      "Tim & struktur organisasi",
+      "Form kontak & Maps",
+      "Admin panel",
+      "Revisi 3x"
+    ],
+    "highlight": false,
+    "icon": "building-office"
+  }
+]

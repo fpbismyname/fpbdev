@@ -1,0 +1,27 @@
+{
+  "name": "FPB Dev",
+  "tagline": "Jasa Pembuatan Website untuk UMKM",
+  "description": "Landing page, katalog, dan company profile yang meningkatkan konversi bisnis Anda",
+  "domain": "fpbdev.web.id",
+  "email": "admin@fpbdev.web.id",
+  "whatsapp": "6285624332863",
+  "social": {
+    "instagram": "fpb99_",
+    "tiktok": "fpb99_",
+    "facebook": "fpb99_"
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "Portfolio", "href": "/portfolio" },
+    { "label": "FAQ", "href": "/#faq" }
+  ],
+  "benefits": [
+    "Responsif di semua perangkat",
+    "SEO friendly & fast loading",
+    "Admin panel mudah digunakan"
+  ],
+  "cta": {
+    "text": "Chat via WhatsApp",
+    "subtext": "Reply cepat, gratis konsultasi"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Ahmad Rizki",
+    "role": "Owner Zara Collections",
+    "content": "Website katalognya really membantu meningkatkan penjualan online. Pelanggan bisa cari produk dengan mudah, conversi naik 40%!",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+  },
+  {
+    "id": "2",
+    "name": "Siti Rahayu",
+    "role": "Director Solusi Consult",
+    "content": "Company profile yang FPB Dev buat sangat professional. Klien corporate jadi lebih percaya. Recommended untuk bisnis B2B!",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop&crop=face"
+  },
+  {
+    "id": "3",
+    "name": "Budi Santoso",
+    "role": "Founder Kursus Online Pro",
+    "content": "Landing page dari FPB Dev mantep! Desainnya clean, loadnya juga cepat. Daftar kursus naik drastis dalam sebulan. Thank you!",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc4aac10f?w=100&h=100&fit=crop&crop=face"
+  }
+]

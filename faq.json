@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "question": "Berapa lama pembuatan website?",
+    "answer": "Landing page: 3-5 hari kerja. Website Katalog: 7-10 hari kerja. Company Profile: 10-14 hari kerja. Durasi dapat berbeda tergantung kompleksitas dan kecepatan feedback dari Anda."
+  },
+  {
+    "id": "2",
+    "question": "Apakah termasuk hosting & domain?",
+    "answer": "Ya! Kami menyediakan 1 tahun hosting gratis untuk semua paket. Untuk domain, Anda bisa menggunakan .com, .id, atau ekstensi lain sesuai ketersediaan. Biaya domain tahun pertama sudah termasuk."
+  },
+  {
+    "id": "3",
+    "question": "Apakah bisa edit sendiri setelah jadi?",
+    "answer": "Tentu saja! Semua website dilengkapi dashboard admin yang mudah digunakan. Anda bisa menambah, edit, atau hapus produk/konten tanpa perlu keahlian coding. Kami juga menyediakan video panduan lengkap."
+  },
+  {
+    "id": "4",
+    "question": "Bagaimana sistem pembayarannya?",
+    "answer": "Kami menggunakan sistem DP 50% di awal, dan 50% sisanya saat website sudah live dan approve. Pembayaran bisa via transfer bank (BCA, BRI, Mandiri) atau e-wallet (Dana, OVO, GoPay)."
+  },
+  {
+    "id": "5",
+    "question": "Apakah termasuk optimasi SEO?",
+    "answer": "Ya! Semua website kami dioptimasi untuk SEO on-page: meta tags, heading structure, image alt text, kecepatan load, dan mobile-friendly. Untuk SEO lanjutan (backlink, content strategy) bisa discussed separately."
+  }
+]
