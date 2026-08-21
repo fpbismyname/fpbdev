@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans:
+        "Inter", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-display:
+        "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+    html {
+        @apply scroll-smooth;
+    }
+    body {
+        @apply font-sans;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-bold font-display tracking-wide leading-tight;
+    }
+}
+
+.badge-section {
+    @apply badge-lg badge-primary mb-4;
+}
+
+.badge-hero {
+    @apply badge-lg badge-primary mb-4 badge-ghost border border-base-content/15;
+}
+
+/**
+    The lines above are intact.
+    The lines below were added by maryUI installer.
+*/
+
+/** daisyUI */
+@plugin "daisyui" {
+    themes: fpblight --default;
+}
+
+/** Typography */
+@plugin "@tailwindcss/typography";
+
+/**
+ * Map prose colors to daisyUI semantic colors (fpblight theme),
+ * so article content follows the site palette instead of prose grays.
+ */
+.article-content {
+    --tw-prose-body: var(--color-base-content);
+    --tw-prose-headings: var(--color-base-content);
+    --tw-prose-lead: var(--color-base-content);
+    --tw-prose-links: var(--color-primary);
+    --tw-prose-bold: var(--color-base-content);
+    --tw-prose-counters: var(--color-primary);
+    --tw-prose-bullets: var(--color-primary);
+    --tw-prose-hr: color-mix(in oklab, var(--color-base-content) 10%, transparent);
+    --tw-prose-quotes: var(--color-base-content);
+    --tw-prose-quote-borders: var(--color-primary);
+    --tw-prose-captions: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+    --tw-prose-code: var(--color-base-content);
+    --tw-prose-pre-code: var(--color-neutral-content);
+    --tw-prose-pre-bg: var(--color-neutral);
+    --tw-prose-th-borders: color-mix(in oklab, var(--color-base-content) 15%, transparent);
+    --tw-prose-td-borders: color-mix(in oklab, var(--color-base-content) 10%, transparent);
+}
+
+@plugin "daisyui/theme" {
+    name: "fpblight";
+    default: true;
+    prefersdark: false;
+    color-scheme: "light";
+
+    /* Base — monochromatic purple tints */
+    --color-base-100: oklch(98.5% 0.004 300);
+    --color-base-200: oklch(96% 0.007 300);
+    --color-base-300: oklch(93% 0.012 300);
+    --color-base-content: oklch(23% 0.03 300);
+
+    /* Brand — monochromatic purple (#7c31cf) */
+    --color-primary: oklch(50.7% 0.225 300);
+    --color-primary-content: oklch(99% 0.004 300);
+
+    --color-secondary: oklch(60% 0.19 300);
+    --color-secondary-content: oklch(99% 0.004 300);
+
+    --color-accent: oklch(42% 0.21 300);
+    --color-accent-content: oklch(99% 0.004 300);
+
+    /* Neutral — ink black */
+    --color-neutral: oklch(15% 0 0);
+    --color-neutral-content: oklch(96% 0 0);
+
+    /* Semantic — standard hues (blue/green/yellow/red) */
+    --color-info: oklch(55% 0.21 260);
+    --color-info-content: oklch(99% 0.004 300);
+
+    --color-success: oklch(65% 0.17 150);
+    --color-success-content: oklch(99% 0.004 300);
+
+    --color-warning: oklch(80% 0.17 85);
+    --color-warning-content: oklch(27% 0.058 90.8);
+
+    --color-error: oklch(55% 0.22 25);
+    --color-error-content: oklch(99% 0.004 300);
+
+    /* Shape — fluid rounded */
+    --radius-selector: 0.5rem;
+    --radius-field: 0.5rem;
+    --radius-box: 1rem;
+
+    /* Sizing */
+    --size-selector: 0.25rem;
+    --size-field: 0.2rem;
+
+    /* Border / depth */
+    --border: 1px;
+    --depth: 1;
+    --noise: 0;
+}
+
+/* maryUI */
+@source "../../vendor/robsontenorio/mary/src/View/Components/**/*.php";
+
+/* Theme toggle */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/**
+* Paginator - Traditional style
+* Because Laravel defaults does not match well the design of daisyUI.
+*/
+
+.mary-table-pagination span[aria-current="page"] > span {
+    @apply bg-primary text-base-100;
+}
+
+.mary-table-pagination button {
+    @apply cursor-pointer;
+}

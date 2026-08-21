@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{{ $title ?? config('app.name') }}</title>
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @fonts
+    @livewireStyles
+</head>
+
+<body class="min-h-screen antialiased bg-base-100">
+    <livewire:ui.navbar />
+    {{ $slot }}
+    <livewire:ui.footer />
+    @livewireScripts
+</body>
+
+</html>
