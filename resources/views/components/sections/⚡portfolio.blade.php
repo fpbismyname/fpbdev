@@ -23,7 +23,7 @@ new class extends Component {
         <div class="flex flex-col gap-8">
             <div class="max-w-2xl">
                 <x-badge value="{{ $site_content['badge'] }}" class="badge-section" />
-                <h1 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">{{ $site_content['headline'] }}</h1>
+                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">{{ $site_content['headline'] }}</h2>
                 <p class="text-lg mb-8 text-base-content/75">{{ $site_content['subheadline'] }}</p>
             </div>
             <div class="flex flex-col gap-8">

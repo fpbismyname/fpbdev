@@ -25,7 +25,7 @@ new class extends Component {
     <div @class(['container', 'mx-auto', 'max-w-7xl', 'px-4'])>
         <div @class(['max-w-2xl', 'col-span-2'])>
             <x-badge value="{{ $site_content['badge'] }}" @class(['badge-section']) />
-            <h1 @class(['text-4xl', 'lg:text-5xl', 'font-black', 'tracking-wide', 'mb-4'])>
+            <h2 @class(['text-4xl', 'lg:text-5xl', 'font-black', 'tracking-wide', 'mb-4'])>
                 {{ $site_content['headline'] }}
             </h1>
             <p @class(['text-lg', 'mb-8', 'text-base-content/75'])>{{ $site_content['subheadline'] }}</p>
@@ -46,7 +46,7 @@ new class extends Component {
                         @endif
                     </figure>
                     <div @class(['card-body'])>
-                        <h1 @class(['text-lg', 'card-title'])>{{ $item->name }}</h1>
+                        <h3 @class(['text-lg', 'card-title'])>{{ $item->name }}</h3>
                         <p>{{ $item->description }}</p>
                     </div>
                 </div>

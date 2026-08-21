@@ -5,7 +5,7 @@ return [
         'index' => [
             'hero' => [
                 'badge' => [
-                    'label' => 'Website untuk Bisnis Rental Mobil',
+                    'label' => 'Website untuk Bisnis Rental',
                     'icon' => 'o-truck',
                 ],
                 'headline' => 'Buat Bisnis Rental Mobil Anda Tampil Lebih Profesional',
@@ -186,7 +186,7 @@ return [
                 'subheadline' => 'Diskusikan kebutuhan website Anda bersama kami dan pilih paket yang paling sesuai dengan kondisi bisnis rental Anda.',
                 'button' => [
                     'label' => 'Konsultasi Gratis',
-                    'value' => '#contact',
+                    'value' => 'contact.whatsapp',
                     'variant' => 'btn-lg',
                 ],
             ],

@@ -27,7 +27,7 @@ new class extends Component {
             </div>
             <div
                 class="flex flex-col items-center gap-2 px-4 py-5 text-center bg-linear-to-b from-primary/15 to-transparent">
-                <h4 class="text-base font-black tracking-wide leading-snug">{{ $mockup['headline'] }}</h4>
+                <p class="text-base font-black tracking-wide leading-snug">{{ $mockup['headline'] }}</p>
                 <span class="btn btn-primary btn-sm w-fit gap-1.5">
                     <x-simpleicon-whatsapp class="w-3.5 h-3.5" />
                     {{ $mockup['cta'] }}
@@ -43,7 +43,8 @@ new class extends Component {
                             </div>
                             <div class="flex-1 min-w-0">
                                 <p class="text-sm font-bold leading-tight">{{ $car['name'] }}</p>
-                                <p class="text-xs text-base-content/60">{{ $car['transmission'] }} · {{ $car['seats'] }}</p>
+                                <p class="text-xs text-base-content/60">{{ $car['transmission'] }} · {{ $car['seats'] }}
+                                </p>
                             </div>
                             <p class="text-xs font-bold text-primary whitespace-nowrap">{{ $car['price'] }}</p>
                         </div>
@@ -65,8 +66,10 @@ new class extends Component {
             </div>
             <div class="px-4 pt-4">
                 <div class="bg-base-200 rounded-box p-3">
-                    <p class="text-xs italic leading-relaxed">&ldquo;{{ $mockup['testimonial']['quote'] }}&rdquo;</p>
-                    <p class="text-[10px] font-bold text-primary mt-1.5">&mdash; {{ $mockup['testimonial']['name'] }}
+                    <p class="text-xs italic leading-relaxed">&ldquo;{{ $mockup['testimonial']['quote'] }}&rdquo;
+                    </p>
+                    <p class="text-[10px] font-bold text-primary mt-1.5">&mdash;
+                        {{ $mockup['testimonial']['name'] }}
                     </p>
                 </div>
             </div>
@@ -79,20 +82,18 @@ new class extends Component {
             </div>
         </div>
     </div>
-    <div class="hidden md:block absolute top-1/4 -right-3/5 -translate-1/2">
-        <x-card class="w-fit shadow-xl border border-base-content/15 text-lg rounded-bl-none">
-            <div class="flex items-center gap-2 text-primary">
-                <x-icon name="o-chart-bar" class="w-5 h-5" />
-                <h4>Mobile Friendly</h4>
-            </div>
-        </x-card>
-    </div>
-    <div class="hidden md:block absolute top-1/2 -left-3/4 translate-1/2">
-        <x-card class="w-fit shadow-xl border border-base-content/15 text-lg rounded-br-none">
-            <div class="flex items-center gap-2 text-primary">
-                <x-icon name="o-cog-6-tooth" class="w-5 h-5" />
-                <h4>Mudah Dikelola</h4>
-            </div>
-        </x-card>
-    </div>
+    <x-card
+        class="shadow-xl border border-base-content/15 text-lg rounded-bl-none rounded-full hidden md:block absolute top-1/4 w-fit -right-1/2">
+        <div class="flex items-center gap-2 text-primary">
+            <x-icon name="o-chart-bar" class="w-5 h-5" />
+            <p>Mobile Friendly</p>
+        </div>
+    </x-card>
+    <x-card
+        class="shadow-xl border border-base-content/15 text-lg rounded-br-none rounded-full hidden md:block absolute top-1/2 w-fit -left-1/2">
+        <div class="flex items-center gap-2 text-primary">
+            <x-icon name="o-cog-6-tooth" class="w-5 h-5" />
+            <p>Mudah Dikelola</p>
+        </div>
+    </x-card>
 </div>

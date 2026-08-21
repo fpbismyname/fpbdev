@@ -2,9 +2,10 @@
 
 use App\Models\Portfolio;
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::base')] class extends Component {
+new #[Layout('layouts::base'), Title('Portfolio')] class extends Component {
     public $site_content;
 
     public function mount()
@@ -41,7 +42,7 @@ new #[Layout('layouts::base')] class extends Component {
                             <div class="flex flex-col items-center gap-4 py-8 text-center">
                                 <x-icon name="o-photo" class="w-8 h-8 text-base-content/50" />
                                 <div>
-                                    <h6 class="text-lg mb-2 font-bold">Belum ada proyek ditampilkan</h6>
+                                    <p class="text-lg mb-2 font-bold">Belum ada proyek ditampilkan</p>
                                     <p class="text-base text-base-content/75">Cek kembali nanti untuk melihat proyek yang
                                         pernah kami kerjakan.</p>
                                 </div>

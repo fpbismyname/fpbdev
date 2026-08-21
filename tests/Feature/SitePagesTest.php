@@ -148,6 +148,29 @@ test('blog page shows empty state when no posts exist', function () {
         ->assertSee('Belum ada artikel');
 });
 
+test('blog page paginates after twelve posts', function () {
+    foreach (range(1, 13) as $index) {
+        Post::create([
+            'title' => "Artikel Nomor {$index}",
+            'slug' => "artikel-nomor-{$index}",
+            'excerpt' => 'Excerpt.',
+            'content' => '<p>Konten.</p>',
+            'status' => PostStatus::PUBLISHED,
+            'published_at' => now()->subDays($index),
+        ]);
+    }
+
+    $this->get('/blog')
+        ->assertOk()
+        ->assertSee('13 artikel')
+        ->assertSee('Artikel Nomor 1')
+        ->assertDontSee('Artikel Nomor 13');
+
+    $this->get('/blog?page=2')
+        ->assertOk()
+        ->assertSee('Artikel Nomor 13');
+});
+
 test('published post detail renders content', function () {
     $post = Post::create([
         'title' => 'Panduan Website Bisnis',

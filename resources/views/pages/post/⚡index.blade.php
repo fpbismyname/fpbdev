@@ -3,6 +3,7 @@
 use App\Enums\PostStatus;
 use App\Models\Post;
 use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Str;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Locked;
 use Livewire\Component;
@@ -16,6 +17,11 @@ new #[Layout('layouts::base')] class extends Component {
         abort_unless($post->status === PostStatus::PUBLISHED, 404);
 
         $this->post = $post->load('category');
+    }
+
+    public function render()
+    {
+        return $this->view()->title($this->post->title);
     }
 
     public function relatedPosts(): Collection
@@ -46,6 +52,8 @@ new #[Layout('layouts::base')] class extends Component {
     }
 };
 ?>
+
+<x-slot:description>{{ Str::limit(strip_tags((string) $this->post->excerpt), 155) }}</x-slot:description>
 
 <main>
     <article @class(['relative', 'pt-24', 'pb-16'])>
@@ -109,7 +117,7 @@ new #[Layout('layouts::base')] class extends Component {
                                             {{ $relatedPost->published_at?->translatedFormat('d M Y') }}
                                         </span>
                                     </div>
-                                    <h4 class="text-xl font-bold link link-hover">{{ $relatedPost->title }}</h4>
+                                    <h3 class="text-xl font-bold link link-hover">{{ $relatedPost->title }}</h3>
                                     <p class="line-clamp-2 text-base-content/75">{{ $relatedPost->excerpt }}</p>
                                 </div>
                             </x-card>

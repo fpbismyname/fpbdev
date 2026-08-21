@@ -35,7 +35,7 @@ new class extends Component {
         <div class="flex flex-col gap-8">
             <div class="max-w-2xl">
                 <x-badge value="{{ $site_content['badge'] }}" class="badge-section" />
-                <h1 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">
+                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">
                     {{ $site_content['headline'] }}
                 </h1>
                 <p class="text-lg mb-8 text-base-content/75">{{ $site_content['subheadline'] }}</p>
@@ -50,7 +50,7 @@ new class extends Component {
                         <div class="flex flex-col items-center gap-4 py-8 text-center">
                             <x-icon name="o-currency-dollar" class="w-8 h-8 text-base-content/50" />
                             <div>
-                                <h6 class="text-lg mb-2 font-bold">Belum ada paket tersedia</h6>
+                                <p class="text-lg mb-2 font-bold">Belum ada paket tersedia</p>
                                 <p class="text-base text-base-content/75">Hubungi kami untuk mendapatkan penawaran yang
                                     sesuai dengan kebutuhan bisnis Anda.</p>
                             </div>
@@ -70,7 +70,7 @@ new class extends Component {
                             ])>
                                 <div class="flex flex-col gap-4 h-full">
                                     <div class="flex items-center justify-between gap-4">
-                                        <h4 class="text-xl font-bold">{{ $item->name }}</h4>
+                                        <h3 class="text-xl font-bold">{{ $item->name }}</h3>
                                         @if ($highlighted)
                                             <x-badge value="Paling Populer" class="badge-primary badge-sm whitespace-nowrap" />
                                         @endif
@@ -109,7 +109,7 @@ new class extends Component {
                 <div class="bg-primary text-primary-content rounded-box p-8 lg:p-12">
                     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                         <div class="max-w-2xl">
-                            <h4 class="text-2xl font-black tracking-wide mb-2">{{ $customApp['title'] }}</h4>
+                            <h3 class="text-2xl font-black tracking-wide mb-2">{{ $customApp['title'] }}</h3>
                             <p class="text-lg text-primary-content/80">{{ $customApp['description'] }}</p>
                         </div>
                         <a href="{{ $customApp['button']['value'] }}"

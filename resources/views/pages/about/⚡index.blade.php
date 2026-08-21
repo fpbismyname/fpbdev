@@ -1,9 +1,10 @@
 <?php
 
 use Livewire\Attributes\Layout;
+use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::base')] class extends Component {
+new #[Layout('layouts::base'), Title('Tentang Kami')] class extends Component {
     //
 };
 ?>

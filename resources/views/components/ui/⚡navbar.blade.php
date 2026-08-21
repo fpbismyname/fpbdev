@@ -2,8 +2,7 @@
 
 use Livewire\Component;
 
-new class extends Component
-{
+new class extends Component {
     public $drawerState = false;
 
     public $ctaButton = [
@@ -55,6 +54,7 @@ new class extends Component
                 <x-menu horizontal class="gap-2 max-lg:hidden p-0">
                     @foreach ($navMenu as $item)
                         <x-menu-item title="{{ $item['label'] }}" link="{{$item['url']}}"
+                            class="data-current:font-bold data-current:text-primary"
                             no-wire-navigate="{{ !$item['useWireNavigate'] }}" />
                     @endforeach
                     @if ($ctaButton)

@@ -17,7 +17,7 @@ new class extends Component {
         <div class="grid gap-8 items-center">
             <div class="max-w-2xl mx-auto text-center">
                 <x-badge value="{{ $site_content['badge'] }}" class="badge-section" />
-                <h1 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">{{ $site_content['headline'] }}</h1>
+                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">{{ $site_content['headline'] }}</h2>
                 <p class="text-lg mb-8 text-base-content/75">{{ $site_content['subheadline'] }}</p>
             </div>
             <div>
@@ -29,7 +29,7 @@ new class extends Component {
                                     class="w-fit h-fit p-3 bg-primary rounded-box text-primary-content inline-flex mx-auto">
                                     <x-icon name="{{ $item['icon'] }}" class="w-6 h-6" />
                                 </div>
-                                <h6 class="text-lg font-bold">{{ $item['label'] }}</h6>
+                                <h3 class="text-lg font-bold">{{ $item['label'] }}</h3>
                                 <p class="text-base text-base-content/75">{{ $item['value'] }}</p>
                             </div>
                         </x-card>

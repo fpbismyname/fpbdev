@@ -25,7 +25,8 @@ class PricingSeeder extends Seeder
                     'Galeri foto & spesifikasi unit',
                     'CTA WhatsApp untuk inquiry/booking',
                     'Optimasi SEO dasar',
-                    'Pelatihan pengelolaan konten',
+                    'Video tutorial pengelolaan website',
+                    'Biaya langganan tahunan (server & domain): Rp50rb/bulan (mulai tahun ke-2)',
                 ],
             ],
             [
@@ -40,7 +41,8 @@ class PricingSeeder extends Seeder
                     'Halaman pricing, FAQ, & blog/artikel',
                     'Hingga 50 unit armada',
                     'Optimasi SEO lengkap',
-                    'Prioritas dukungan & pelatihan',
+                    'Prioritas dukungan',
+                    'Biaya langganan tahunan (server & domain): Rp70rb/bulan (mulai tahun ke-2)',
                 ],
             ],
             [
@@ -55,6 +57,7 @@ class PricingSeeder extends Seeder
                     'Integrasi payment gateway (Midtrans/Xendit)',
                     'Notifikasi WhatsApp & dashboard admin',
                     'Fitur custom sesuai kebutuhan armada',
+                    'Biaya langganan tahunan (server & domain): Rp100rb/bulan (mulai tahun ke-2)',
                 ],
             ],
         ];

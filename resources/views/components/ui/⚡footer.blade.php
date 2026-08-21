@@ -50,10 +50,13 @@ new class extends Component {
             </aside>
             <nav>
                 <h6 class="footer-title">Navigasi</h6>
-                <a class="link link-hover" href="#services">Layanan</a>
-                <a class="link link-hover" href="#portfolio">Portfolio</a>
-                <a class="link link-hover" href="#about">Tentang Kami</a>
-                <a class="link link-hover" href="#faq">FAQ</a>
+                <a class="link link-hover" href="/" wire:navigate
+                    wire:current.exact="font-bold text-primary">Beranda</a>
+                <a class="link link-hover" href="/portfolio" wire:navigate
+                    wire:current="font-bold text-primary">Portfolio</a>
+                <a class="link link-hover" href="/about" wire:navigate wire:current="font-bold text-primary">Tentang
+                    Kami</a>
+                <a class="link link-hover" href="/blog" wire:navigate wire:current="font-bold text-primary">Blog</a>
             </nav>
             <nav>
                 <h6 class="footer-title">Kontak</h6>
@@ -76,7 +79,7 @@ new class extends Component {
     <div @class(['border-t', 'border-base-content/10'])>
         <div @class(['container', 'mx-auto', 'max-w-7xl', 'px-4', 'py-6', 'flex', 'items-center', 'justify-between', 'gap-4', 'text-sm', 'text-base-content/75'])>
             <p>&copy; {{ date('Y') }} {{ settings('name', config('app.name')) }}.</p>
-            <x-button link="#" no-wire-navigate icon="o-arrow-up" class="btn-sm">
+            <x-button link="#" no-wire-navigate icon="m-arrow-small-up" class="btn-sm">
                 Kembali ke Atas
             </x-button>
         </div>
