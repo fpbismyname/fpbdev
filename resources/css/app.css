@@ -133,6 +133,23 @@
 /* Theme toggle */
 @custom-variant dark (&:where(.dark, .dark *));
 
+/* Reveal — hidden awal hanya saat JS aktif (.js-reveal) */
+html.js-reveal [data-reveal] {
+    opacity: 0;
+    transform: translateY(16px);
+}
+html.js-reveal [data-reveal-group] > * {
+    opacity: 0;
+    transform: translateY(16px);
+}
+@media (prefers-reduced-motion: reduce) {
+    html.js-reveal [data-reveal],
+    html.js-reveal [data-reveal-group] > * {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
+
 /**
 * Paginator - Traditional style
 * Because Laravel defaults does not match well the design of daisyUI.

@@ -16,13 +16,13 @@ new class extends Component {
     <div class="container mx-auto max-w-7xl px-4">
         <div class="flex flex-col gap-12">
             <div class="max-w-2xl mx-auto text-center">
-                <x-badge value="{{ $site_content['badge'] }}" class="badge-section" />
-                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">
+                <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
+                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">
                     {{ $site_content['headline'] }}
                 </h1>
-                <p class="text-lg text-base-content/75">{{ $site_content['subheadline'] }}</p>
+                <p class="text-lg text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4" data-reveal-group data-reveal-delay="240">
                 <div
                     class="relative md:col-span-2 lg:row-span-2 rounded-box overflow-hidden border border-base-content/15 transition-colors duration-200 hover:border-primary min-h-64 lg:min-h-0">
                     @if ($site_content['image'] && file_exists(public_path($site_content['image'])))

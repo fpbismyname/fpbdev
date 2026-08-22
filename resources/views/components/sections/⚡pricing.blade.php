@@ -34,11 +34,11 @@ new class extends Component {
     <div class="container mx-auto max-w-7xl px-4">
         <div class="flex flex-col gap-8">
             <div class="max-w-2xl">
-                <x-badge value="{{ $site_content['badge'] }}" class="badge-section" />
-                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4">
+                <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
+                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">
                     {{ $site_content['headline'] }}
                 </h1>
-                <p class="text-lg mb-8 text-base-content/75">{{ $site_content['subheadline'] }}</p>
+                <p class="text-lg mb-8 text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
             </div>
             @php
                 $pricings = $this->listPricings();
@@ -57,7 +57,7 @@ new class extends Component {
                         </div>
                     </x-card>
                 @else
-                    <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                    <div class="grid lg:grid-cols-3 gap-8 items-stretch" data-reveal-group data-reveal-delay="260">
                         @foreach ($pricings as $item)
                             @php
                                 $highlighted = $item->slug === 'rental-professional';
@@ -106,7 +106,7 @@ new class extends Component {
                         @endforeach
                     </div>
                 @endif
-                <div class="bg-primary text-primary-content rounded-box p-8 lg:p-12">
+                <div class="bg-primary text-primary-content rounded-box p-8 lg:p-12" data-reveal data-reveal-delay="500">
                     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                         <div class="max-w-2xl">
                             <h3 class="text-2xl font-black tracking-wide mb-2">{{ $customApp['title'] }}</h3>

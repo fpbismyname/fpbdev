@@ -1,0 +1,70 @@
+# Git
+.git
+.gitignore
+.github
+
+# Opencode / AI
+.agents
+.ai
+
+# Node
+node_modules
+npm-debug.log
+.pnpm-debug.log
+.pnpm-store
+.yarn
+
+# PHP
+vendor
+.phpunit.result.cache
+.phpunit.cache
+.phpactor.json
+_ide_helper.php
+
+# Env & secrets
+.env
+.env.*
+!.env.example
+auth.json
+
+# IDE
+.idea
+.vscode
+.cursor
+.nova
+.zed
+.DS_Store
+Thumbs.db
+Homestead.json
+Homestead.yaml
+
+# Laravel storage & cache (akan di-mount sebagai Render Disk, jangan bake ke image)
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/views/*
+storage/pail
+storage/*.key
+bootstrap/cache/*.php
+
+# Build artefacts (dibangun di Docker stage frontend)
+public/build
+public/hot
+public/storage
+
+# Database (sqlite persist via Render Disk, jangan bake file dev 500MB)
+database/*.sqlite
+database/*.sqlite-journal
+database/*.sqlite-wal
+
+# Tests & docs
+tests
+.phpunit.result.cache
+coverage
+README.md
+*.md
+
+# Docker
+docker-compose*.yml
+Dockerfile
+.dockerignore

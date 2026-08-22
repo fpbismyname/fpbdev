@@ -3,6 +3,28 @@
 
 <head>
     <meta charset="utf-8">
+    <script>
+        try {
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('js-reveal');
+            }
+        } catch (e) {}
+    </script>
+    <style>
+        html.js-reveal [data-reveal],
+        html.js-reveal [data-reveal-group] > * {
+            opacity: 0;
+            transform: translateY(16px);
+            will-change: opacity, transform;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html.js-reveal [data-reveal],
+            html.js-reveal [data-reveal-group] > * {
+                opacity: 1 !important;
+                transform: none !important;
+            }
+        }
+    </style>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     @php

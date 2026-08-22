@@ -13,11 +13,11 @@ new class extends Component {
 };
 ?>
 
-<footer @class(['border-t', 'border-base-content/15', 'bg-base-200/50'])>
+<footer @class(['border-t', 'border-t-base-content/15', 'bg-base-200/50'])>
     <div @class(['container', 'mx-auto', 'max-w-7xl', 'px-4', 'py-16'])>
         <div @class(['footer', 'sm:footer-horizontal', 'gap-12'])>
             <aside>
-                <a href="#hero" class="flex items-center gap-4">
+                <a href="#" class="flex items-center gap-4">
                     @if (settings('media.site_logo.original_url'))
                         <img src="{{ settings('media.site_logo.original_url') }}" class="rounded-full" width="32"
                             height="32" />
@@ -76,12 +76,19 @@ new class extends Component {
             </nav>
         </div>
     </div>
-    <div @class(['border-t', 'border-base-content/10'])>
+    <div>
         <div @class(['container', 'mx-auto', 'max-w-7xl', 'px-4', 'py-6', 'flex', 'items-center', 'justify-between', 'gap-4', 'text-sm', 'text-base-content/75'])>
             <p>&copy; {{ date('Y') }} {{ settings('name', config('app.name')) }}.</p>
-            <x-button link="#" no-wire-navigate icon="m-arrow-small-up" class="btn-sm">
-                Kembali ke Atas
+            <x-button link="#" no-wire-navigate icon="m-arrow-small-up" class="btn">
+                Kembali Ke Atas
             </x-button>
         </div>
+    </div>
+    @php $footerWordmark = Str::upper(settings('name', config('app.name'))); @endphp
+    <div class="overflow-hidden select-none pointer-events-none" aria-hidden="true">
+        <p
+            class="text-center font-black font-display tracking-tighter leading-none whitespace-nowrap text-base-content/[0.07] text-[18vw] lg:text-[clamp(8rem,16vw,18rem)] -mb-16 uppercase">
+            {{ $footerWordmark }}
+        </p>
     </div>
 </footer>
