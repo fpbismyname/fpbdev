@@ -19,7 +19,7 @@ new class extends Component {
                 <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
                 <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">
                     {{ $site_content['headline'] }}
-                </h1>
+                </h2>
                 <p class="text-lg text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4" data-reveal-group data-reveal-delay="240">

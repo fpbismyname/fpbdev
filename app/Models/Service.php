@@ -7,8 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-#[Fillable('name', 'slug', 'description')]
+#[Fillable('name', 'slug', 'description', 'sort_order')]
 class Service extends Model implements HasMedia
 {
     use InteractsWithMedia;
+
+    public function registerMediaCollections(): void
+    {
+        $this->addMediaCollection('services');
+    }
 }

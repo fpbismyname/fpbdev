@@ -54,6 +54,9 @@ new #[Layout('layouts::base')] class extends Component {
 ?>
 
 <x-slot:description>{{ Str::limit(strip_tags((string) $this->post->excerpt), 155) }}</x-slot:description>
+<x-slot:ogType>article</x-slot:ogType>
+<x-slot:ogImage>{{ $this->post->getFirstMediaUrl('posts/cover') ?: settings('media.site_logo.original_url') }}</x-slot:ogImage>
+<x-slot:publishedAt>{{ $this->post->published_at?->toIso8601String() }}</x-slot:publishedAt>
 
 <main>
     <article @class(['relative', 'pt-24', 'pb-16'])>
@@ -68,8 +71,8 @@ new #[Layout('layouts::base')] class extends Component {
                     Dipublikasikan {{ $this->post->published_at?->translatedFormat('d F Y') }}
                 </p>
                 @if ($this->post->getFirstMediaUrl('posts/cover'))
-                    <img src="{{ $this->post->getFirstMediaUrl('posts/cover') }}"
-                        class="w-full aspect-16/9 object-center object-cover rounded-box shadow-lg" />
+                    <img src="{{ $this->post->getFirstMediaUrl('posts/cover') }}" alt="{{ $this->post->title }}"
+                        class="w-full aspect-16/9 object-center object-cover rounded-box shadow-lg" loading="lazy" decoding="async" />
                 @endif
                 <div class="article-content prose prose-lg max-w-none">
                     {!! $this->post->content !!}
@@ -94,8 +97,8 @@ new #[Layout('layouts::base')] class extends Component {
                                 class="h-full bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
                                 <x-slot:figure class="aspect-4/3">
                                     @if ($relatedPost->getFirstMediaUrl('posts/cover'))
-                                        <img src="{{ $relatedPost->getFirstMediaUrl('posts/cover') }}"
-                                            class="w-full h-full object-center object-cover" />
+                                        <img src="{{ $relatedPost->getFirstMediaUrl('posts/cover') }}" alt="{{ $relatedPost->title }}"
+                                            class="w-full h-full object-center object-cover" loading="lazy" decoding="async" />
                                     @else
                                         <div
                                             class="w-full h-full bg-primary/5 border border-dashed border-primary/30 grid place-items-center">

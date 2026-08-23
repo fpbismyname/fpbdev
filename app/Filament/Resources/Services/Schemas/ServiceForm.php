@@ -20,6 +20,7 @@ class ServiceForm
                     ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state)))
                     ->required(),
                 TextInput::make('slug')
+                    ->unique(ignoreRecord: true)
                     ->required(),
                 SpatieMediaLibraryFileUpload::make('image')
                     ->collection('services'),

@@ -17,6 +17,7 @@ class PricingSeeder extends Seeder
                 'slug' => 'rental-starter',
                 'name' => 'Starter',
                 'description' => 'Landing page fokus 1 mobil unggulan untuk promosi & iklan.',
+                'sort_order' => 1,
                 'price' => 1200000,
                 'features' => [
                     '1 Landing Page promo mobil unggulan',
@@ -33,6 +34,7 @@ class PricingSeeder extends Seeder
                 'slug' => 'rental-professional',
                 'name' => 'Professional',
                 'description' => 'Website lengkap company profile + katalog armada + artikel untuk rental mobil.',
+                'sort_order' => 2,
                 'price' => 1700000,
                 'features' => [
                     'Semua fitur Starter',
@@ -49,6 +51,7 @@ class PricingSeeder extends Seeder
                 'slug' => 'rental-custom',
                 'name' => 'Custom',
                 'description' => 'Mulai Rp3.500.000 — full website + booking system custom sesuai kebutuhan.',
+                'sort_order' => 3,
                 'price' => 3500000,
                 'features' => [
                     'Semua fitur Professional',

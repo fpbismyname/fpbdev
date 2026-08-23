@@ -22,7 +22,11 @@ new class extends Component {
                     </h1>
                     <p class="text-lg text-primary-content/80" data-reveal data-reveal-delay="80">{{ $site_content['subheadline'] }}</p>
                 </div>
-                <x-button link="{{ $site_content['button']['value'] }}" @class([$site_content['button']['variant']])
+                @php
+                    $wa = settings('contact.whatsapp');
+                    $ctaLink = $wa ? 'https://wa.me/'.preg_replace('/\D/', '', $wa) : ($site_content['button']['value'] !== 'contact.whatsapp' ? $site_content['button']['value'] : '#contact');
+                @endphp
+                <x-button link="{{ $ctaLink }}" @class([$site_content['button']['variant']])
                     external label="{{ $site_content['button']['label'] }}" data-reveal data-reveal-delay="160" />
             </div>
         </div>

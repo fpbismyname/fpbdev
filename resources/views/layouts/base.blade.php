@@ -30,6 +30,8 @@
     @php
         $siteName = settings('name', config('app.name'));
         $pageTitle = isset($title) ? $title.' | '.$siteName : $siteName;
+        $faviconUrl = settings('media.site_logo.original_url') ?: '/favicon.ico';
+        $appleIconUrl = settings('media.site_logo.original_url') ?: '/apple-touch-icon.png';
     @endphp
     <title>{{ $pageTitle }}</title>
     <meta name="description"
@@ -46,6 +48,25 @@
     @elseif (settings('media.site_logo.original_url'))
         <meta property="og:image" content="{{ settings('media.site_logo.original_url') }}">
     @endif
+    @if (($ogType ?? '') === 'article' && isset($publishedAt))
+        <meta property="article:published_time" content="{{ $publishedAt }}">
+    @endif
+    <meta property="og:locale" content="id_ID">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $pageTitle }}">
+    <meta name="twitter:description" content="{{ $description ?? settings('description', config('app.name')) }}">
+    @if (isset($ogImage))
+        <meta name="twitter:image" content="{{ $ogImage }}">
+    @elseif (settings('media.site_logo.original_url'))
+        <meta name="twitter:image" content="{{ settings('media.site_logo.original_url') }}">
+    @endif
+
+    <link rel="icon" href="{{ $faviconUrl }}" sizes="any">
+    <link rel="apple-touch-icon" href="{{ $appleIconUrl }}">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#7c31cf">
+
+    <script type="application/ld+json">{!! json_encode(['@context' => 'https://schema.org','@type' => 'Organization','name' => settings('name', config('app.name')),'url' => config('app.url'),'logo' => settings('media.site_logo.original_url') ?: config('app.url').'/favicon-32x32.png','description' => settings('description', config('app.name'))], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fonts

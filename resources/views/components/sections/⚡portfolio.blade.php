@@ -13,7 +13,7 @@ new class extends Component {
 
     public function listPortfolio()
     {
-        return Portfolio::query()->latest()->get()->take(3);
+        return Portfolio::query()->orderBy('sort_order')->orderByDesc('id')->get()->take(3);
     }
 };
 ?>

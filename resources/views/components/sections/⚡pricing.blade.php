@@ -13,7 +13,7 @@ new class extends Component {
 
     public function listPricings()
     {
-        $pricings = Pricing::query()->orderBy('price')->get();
+        $pricings = Pricing::query()->orderBy('sort_order')->orderBy('price')->get();
         $highlighted = $pricings->firstWhere('slug', 'rental-professional');
 
         if ($highlighted) {
@@ -37,8 +37,10 @@ new class extends Component {
                 <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
                 <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">
                     {{ $site_content['headline'] }}
-                </h1>
-                <p class="text-lg mb-8 text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
+                </h2>
+                <p class="text-lg mb-8 text-base-content/75" data-reveal data-reveal-delay="160">
+                    {{ $site_content['subheadline'] }}
+                </p>
             </div>
             @php
                 $pricings = $this->listPricings();
@@ -93,12 +95,23 @@ new class extends Component {
                                             @endforeach
                                         </ul>
                                     @endif
-                                    <a href="#contact" @class([
+                                    @php
+                                        $wa = settings('contact.whatsapp');
+                                        $waBase = $wa ? 'https://wa.me/' . preg_replace('/\D/', '', $wa) : null;
+                                        $waTexts = [
+                                            'rental-starter' => 'Halo FPBDEV, saya tertarik paket Starter (Rp' . number_format($item->price, 0, ',', '.') . ')',
+                                            'rental-professional' => 'Halo FPBDEV, saya tertarik paket Professional - Paling Populer (Rp' . number_format($item->price, 0, ',', '.') . ')',
+                                            'rental-custom' => 'Halo FPBDEV, saya mau konsultasi paket Custom (Mulai Rp' . number_format($item->price, 0, ',', '.') . ')',
+                                        ];
+                                        $waText = $waTexts[$item->slug] ?? 'Halo FPBDEV, saya tertarik paket ' . $item->name;
+                                        $waLink = $waBase ? $waBase . '?text=' . rawurlencode($waText) : '#contact';
+                                    @endphp
+                                    <a href="{{ $waLink }}" @class([
                                         'btn',
                                         'w-full',
                                         'mt-auto',
                                         'btn-primary' => $highlighted,
-                                    ])>
+                                    ]) @if($waBase) target="_blank" rel="noopener noreferrer" @endif>
                                         Pilih Paket
                                     </a>
                                 </div>
@@ -106,7 +119,8 @@ new class extends Component {
                         @endforeach
                     </div>
                 @endif
-                <div class="bg-primary text-primary-content rounded-box p-8 lg:p-12" data-reveal data-reveal-delay="500">
+                <div class="bg-primary text-primary-content rounded-box p-8 lg:p-12" data-reveal
+                    data-reveal-delay="500">
                     <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
                         <div class="max-w-2xl">
                             <h3 class="text-2xl font-black tracking-wide mb-2">{{ $customApp['title'] }}</h3>

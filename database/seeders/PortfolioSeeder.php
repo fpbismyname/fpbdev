@@ -19,6 +19,7 @@ class PortfolioSeeder extends Seeder
                 'description' => 'Website e-commerce untuk penjualan kopi nusantara dengan katalog produk, keranjang belanja, dan pembayaran terintegrasi.',
                 'client' => 'Kopi Nusantara',
                 'url' => 'https://kopinusantara.example.com',
+                'sort_order' => 1,
             ],
             [
                 'slug' => 'hotel-grand-asia',
@@ -26,6 +27,7 @@ class PortfolioSeeder extends Seeder
                 'description' => 'Website resmi hotel dengan informasi kamar, fasilitas, dan form pemesanan yang mudah diakses dari berbagai perangkat.',
                 'client' => 'Hotel Grand Asia',
                 'url' => 'https://hotelgrandasia.example.com',
+                'sort_order' => 2,
             ],
             [
                 'slug' => 'klinik-sehat-medika',
@@ -33,6 +35,7 @@ class PortfolioSeeder extends Seeder
                 'description' => 'Aplikasi web pemesanan jadwal konsultasi dengan notifikasi otomatis dan dashboard antrean untuk pasien.',
                 'client' => 'Klinik Sehat Medika',
                 'url' => 'https://kliniksehatmedika.example.com',
+                'sort_order' => 3,
             ],
             [
                 'slug' => 'batik-indah-collection',
@@ -40,6 +43,7 @@ class PortfolioSeeder extends Seeder
                 'description' => 'Toko online fashion batik dengan galeri produk, fitur ukuran, dan promo musiman untuk meningkatkan penjualan.',
                 'client' => 'Batik Indah Collection',
                 'url' => 'https://batikindah.example.com',
+                'sort_order' => 4,
             ],
             [
                 'slug' => 'smk-harapan-bangsa',
@@ -47,6 +51,7 @@ class PortfolioSeeder extends Seeder
                 'description' => 'Portal informasi sekolah dengan berita kegiatan, pengumuman PPDB online, dan profil tenaga pengajar.',
                 'client' => 'SMK Harapan Bangsa',
                 'url' => 'https://smkharapanbangsa.example.com',
+                'sort_order' => 5,
             ],
             [
                 'slug' => 'umkm-bersinar',
@@ -54,6 +59,7 @@ class PortfolioSeeder extends Seeder
                 'description' => 'Landing page kampanye pemberdayaan UMKM dengan halaman pendaftaran dan integrasi WhatsApp untuk konversi.',
                 'client' => 'Program UMKM Bersinar',
                 'url' => 'https://umkmbersinar.example.com',
+                'sort_order' => 6,
             ],
         ];
 

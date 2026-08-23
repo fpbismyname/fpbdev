@@ -18,7 +18,7 @@ class CategoryForm
                     ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state)))
                     ->required(),
                 TextInput::make('slug')
-                    ->unique()
+                    ->unique(ignoreRecord: true)
                     ->required(),
             ]);
     }

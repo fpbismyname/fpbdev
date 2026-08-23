@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-#[Fillable('name', 'slug', 'description', 'price', 'features')]
+#[Fillable('name', 'slug', 'description', 'price', 'features', 'sort_order')]
 class Pricing extends Model implements HasMedia
 {
     use InteractsWithMedia;

@@ -15,10 +15,12 @@ new #[Layout('layouts::base'), Title('Portfolio')] class extends Component {
 
     public function listPortfolios()
     {
-        return Portfolio::query()->latest()->get();
+        return Portfolio::query()->orderBy('sort_order')->orderByDesc('id')->get();
     }
 };
 ?>
+
+<x-slot:description>{{ config('site_content.pages.index.portfolio.subheadline') }}</x-slot:description>
 
 <main>
     <section @class(['relative', 'py-24'])>

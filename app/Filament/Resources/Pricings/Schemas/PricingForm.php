@@ -6,6 +6,7 @@ use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
+use Illuminate\Support\Str;
 
 class PricingForm
 {
@@ -14,8 +15,11 @@ class PricingForm
         return $schema
             ->components([
                 TextInput::make('name')
+                    ->reactive()
+                    ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state)))
                     ->required(),
                 TextInput::make('slug')
+                    ->unique(ignoreRecord: true)
                     ->required(),
                 Textarea::make('description')
                     ->required()

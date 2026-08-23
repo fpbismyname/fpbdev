@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 
-#[Fillable('title', 'slug', 'excerpt', 'content', 'status', 'published_at')]
+#[Fillable('title', 'slug', 'excerpt', 'content', 'status', 'published_at', 'category_id')]
 class Post extends Model implements HasMedia
 {
     use InteractsWithMedia;

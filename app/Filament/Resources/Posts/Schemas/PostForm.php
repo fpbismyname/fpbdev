@@ -23,6 +23,7 @@ class PostForm
                     ->afterStateUpdated(fn ($state, $set) => $set('slug', Str::slug($state)))
                     ->required(),
                 TextInput::make('slug')
+                    ->unique(ignoreRecord: true)
                     ->required(),
                 SpatieMediaLibraryFileUpload::make('cover')
                     ->columnSpanFull()
@@ -71,7 +72,7 @@ class PostForm
                     ->required(),
                 DateTimePicker::make('published_at')
                     ->hidden(fn ($get) => $get('status') === PostStatus::DRAFT)
-                    ->required(),
+                    ->required(fn ($get) => $get('status') !== PostStatus::DRAFT),
             ]);
     }
 }

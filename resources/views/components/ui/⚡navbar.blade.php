@@ -45,8 +45,10 @@ new class extends Component {
         <x-nav class="border-none">
             <x-slot:brand>
                 <a class="flex items-center gap-4" href="/" wire:navigate>
-                    <img src="{{ settings('media.site_logo.original_url') }}" class="rounded-full" width="32"
-                        height="32" />
+                    @if (settings('media.site_logo.original_url'))
+                        <img src="{{ settings('media.site_logo.original_url') }}" alt="{{ settings('name', config('app.name')) }} logo" class="rounded-full" width="32"
+                            height="32" loading="lazy" decoding="async" />
+                    @endif
                     <h6 class="font-black text-xl uppercase">{{ settings('name', 'Name') }}</h6>
                 </a>
             </x-slot:brand>

@@ -2,6 +2,7 @@
 
 namespace App\Filament\Pages\Settings;
 
+use App\Enums\Role;
 use App\Models\Setting as SettingModel;
 use BackedEnum;
 use Filament\Actions\Action;
@@ -17,6 +18,7 @@ use Filament\Schemas\Components\Grid;
 use Filament\Schemas\Components\Section;
 use Filament\Schemas\Schema;
 use Filament\Support\Enums\Alignment;
+use Illuminate\Support\Facades\Cache;
 use UnitEnum;
 
 class General extends Page
@@ -28,6 +30,13 @@ class General extends Page
     protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-cog';
 
     protected static ?int $navigationSort = 999;
+
+    public static function canAccess(): bool
+    {
+        $user = auth()->user();
+
+        return $user && in_array($user->role, [Role::ADMIN, Role::OWNER], true);
+    }
 
     public SettingModel $settings;
 
@@ -106,6 +115,7 @@ class General extends Page
                                     ->itemLabel(fn ($state) => $state['name'])
                                     ->addActionAlignment(Alignment::Start)
                                     ->collapsible()
+                                    ->debounce()
                                     ->collapsed()
                                     ->schema([
                                         Section::make([
@@ -130,6 +140,7 @@ class General extends Page
                                     ->itemLabel(fn ($state) => $state['name'])
                                     ->addActionAlignment(Alignment::Start)
                                     ->collapsible()
+                                    ->debounce()
                                     ->collapsed()
                                     ->schema([
                                         Section::make([
@@ -159,7 +170,7 @@ class General extends Page
     public function save()
     {
         $data = $this->form->getState();
-        $isCreateNew = $this->settings->get()->isEmpty();
+        $isCreateNew = ! $this->settings->exists;
         if ($isCreateNew) {
             $this->settings->fill($data);
             $this->settings->save();
@@ -167,6 +178,9 @@ class General extends Page
             $this->settings->update($data);
         }
         $this->form->saveRelationships();
+
+        Cache::forget('settings');
+        Cache::rememberForever('settings', fn () => $this->settings->refresh()->load('media')->toArray());
 
         return Notification::make()
             ->title('Setting saved')

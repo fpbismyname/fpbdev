@@ -1,0 +1,20 @@
+{
+    "name": "FPBDEV",
+    "short_name": "FPBDEV",
+    "description": "Website untuk Bisnis Rental Mobil — FPBDEV",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#7c31cf",
+    "background_color": "#f9f5ff",
+    "display": "standalone"
+}

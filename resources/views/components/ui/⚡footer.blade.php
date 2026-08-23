@@ -19,8 +19,8 @@ new class extends Component {
             <aside>
                 <a href="#" class="flex items-center gap-4">
                     @if (settings('media.site_logo.original_url'))
-                        <img src="{{ settings('media.site_logo.original_url') }}" class="rounded-full" width="32"
-                            height="32" />
+                        <img src="{{ settings('media.site_logo.original_url') }}" alt="{{ settings('name', config('app.name')) }} logo" class="rounded-full" width="32"
+                            height="32" loading="lazy" decoding="async" />
                     @endif
                     <h6 class="font-black text-xl uppercase">{{ settings('name', 'Name') }}</h6>
                 </a>
