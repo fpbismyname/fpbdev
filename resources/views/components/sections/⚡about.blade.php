@@ -22,30 +22,17 @@ new class extends Component {
                 </h2>
                 <p class="text-lg text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4" data-reveal-group data-reveal-delay="240">
-                <div
-                    class="relative md:col-span-2 lg:row-span-2 rounded-box overflow-hidden border border-base-content/15 transition-colors duration-200 hover:border-primary min-h-64 lg:min-h-0">
-                    @if ($site_content['image'] && file_exists(public_path($site_content['image'])))
-                        <img src="{{ asset($site_content['image']) }}" alt="Tentang FPBDEV"
-                            class="absolute inset-0 w-full h-full object-cover" />
-                    @else
-                        <div class="absolute inset-0 bg-base-200 grid place-items-center">
-                            <div class="flex flex-col items-center gap-2 text-base-content/50">
-                                <x-icon name="o-photo" class="w-10 h-10" />
-                                <span class="text-sm">Foto tentang kami akan tampil di sini</span>
-                            </div>
-                        </div>
-                    @endif
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal-group data-reveal-delay="240">
                 @foreach ($site_content['points'] as $point)
-                    <x-card
-                        @class(['bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary', 'md:col-span-2 lg:col-span-2' => $loop->last])>
-                        <div class="flex flex-col gap-3">
-                            <div class="w-fit h-fit p-3 bg-primary rounded-box text-primary-content inline-flex">
-                                <x-icon name="{{ $point['icon'] }}" class="w-6 h-6" />
+                    <x-card class="bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
+                        <div class="flex flex-col items-center text-center gap-4 p-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-full grid place-items-center">
+                                <x-icon name="{{ $point['icon'] }}" class="w-6 h-6 text-primary" />
                             </div>
-                            <h3 class="text-lg font-bold">{{ $point['label'] }}</h3>
-                            <p class="text-base text-base-content/75">{{ $point['value'] }}</p>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold mb-2">{{ $point['label'] }}</h3>
+                                <p class="text-base text-base-content/75">{{ $point['value'] }}</p>
+                            </div>
                         </div>
                     </x-card>
                 @endforeach

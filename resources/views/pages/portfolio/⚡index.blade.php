@@ -40,7 +40,7 @@ new #[Layout('layouts::base'), Title('Portfolio')] class extends Component {
                 @endphp
                 <div>
                     @if ($portfolios->isEmpty())
-                        <x-card class="bg-base-200 border border-base-content/15">
+                        <x-card class="bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
                             <div class="flex flex-col items-center gap-4 py-8 text-center">
                                 <x-icon name="o-photo" class="w-8 h-8 text-base-content/50" />
                                 <div>

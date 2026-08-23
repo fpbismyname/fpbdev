@@ -35,21 +35,19 @@ new class extends Component {
                 @php
                     $imageItem = $item->getMedia('services')->first();
                 @endphp
-                <div @class(['card', 'group/cardServices', 'image-full', 'aspect-4/3'])>
-                    <figure>
+                <x-card class="bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
+                    <x-slot:figure>
                         @if ($imageItem)
-                            <img src="{{ $imageItem->getUrl() }}" alt="{{ $item->name }}"
-                                class="object-center object-cover w-full h-full group-hover/cardServices:brightness-50 transition-discrete duration-200" loading="lazy" decoding="async" />
+                            <img src="{{ $imageItem->getUrl() }}" alt="{{ $item->name }}" class="w-full aspect-4/3 object-cover" loading="lazy" decoding="async" />
                         @else
-                            <div class="grid content-center h-full w-full bg-neutral aspect-3/1">
+                            <div class="w-full aspect-4/3 bg-base-300 grid place-items-center">
+                                <x-icon name="o-photo" class="w-8 h-8 text-base-content/30" />
                             </div>
                         @endif
-                    </figure>
-                    <div @class(['card-body'])>
-                        <h3 @class(['text-lg', 'card-title'])>{{ $item->name }}</h3>
-                        <p>{{ $item->description }}</p>
-                    </div>
-                </div>
+                    </x-slot:figure>
+                    <h3 class="text-lg card-title">{{ $item->name }}</h3>
+                    <p class="text-base-content/75">{{ $item->description }}</p>
+                </x-card>
             @endforeach
         </div>
     </div>

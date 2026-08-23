@@ -23,7 +23,7 @@ new class extends Component {
             <div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4" data-reveal-group data-reveal-delay="240">
                     @foreach ($site_content['items'] as $item)
-                        <x-card class="bg-base-200 border border-base-content/15">
+                        <x-card class="bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
                             <div class="flex flex-col gap-3 text-center">
                                 <div
                                     class="w-fit h-fit p-3 bg-primary rounded-box text-primary-content inline-flex mx-auto">

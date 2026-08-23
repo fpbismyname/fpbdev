@@ -132,7 +132,7 @@ return [
                 'badge' => 'Tentang Kami',
                 'headline' => 'Partner Digital untuk Bisnis Rental Mobil',
                 'subheadline' => 'FPBDEV membantu bisnis rental mobil membangun website yang profesional, mudah dikelola, dan sesuai dengan kebutuhan bisnis Anda.',
-                'image' => 'storage/about.webp',
+                'image' => 'storage/about.jpeg',
                 'points' => [
                     [
                         'label' => 'Memahami Kebutuhan Rental',
