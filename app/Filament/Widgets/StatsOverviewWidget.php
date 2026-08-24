@@ -22,10 +22,6 @@ class StatsOverviewWidget extends BaseWidget
                 ->description(Post::where('status', PostStatus::PUBLISHED)->count().' published / '.Post::where('status', PostStatus::DRAFT)->count().' draft')
                 ->descriptionIcon('heroicon-m-document-text')
                 ->color('primary'),
-            Stat::make('Published Posts', Post::where('status', PostStatus::PUBLISHED)->count())
-                ->description('Siap tampil di blog')
-                ->descriptionIcon('heroicon-m-check-circle')
-                ->color('success'),
             Stat::make('Services', Service::count())
                 ->description('Layanan aktif')
                 ->descriptionIcon('heroicon-m-hand-raised')
