@@ -32,6 +32,6 @@ class Setting extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('site_logo')->singleFile();
+        $this->addMediaCollection('site_logo')->useDisk('public')->singleFile();
     }
 }
