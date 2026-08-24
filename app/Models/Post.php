@@ -5,6 +5,7 @@ namespace App\Models;
 use App\Enums\PostStatus;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Cache;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
@@ -29,6 +30,12 @@ class Post extends Model implements HasMedia
         'status' => PostStatus::class,
         'published_at' => 'datetime',
     ];
+
+    protected static function booted(): void
+    {
+        static::saved(fn () => Cache::forget('sitemap'));
+        static::deleted(fn () => Cache::forget('sitemap'));
+    }
 
     public function category()
     {
