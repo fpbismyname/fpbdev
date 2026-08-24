@@ -14,6 +14,6 @@ class Portfolio extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('portfolio');
+        $this->addMediaCollection('portfolio')->useDisk('public');
     }
 }

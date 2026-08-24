@@ -14,6 +14,6 @@ class Service extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('services');
+        $this->addMediaCollection('services')->useDisk('public');
     }
 }

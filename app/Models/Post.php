@@ -15,7 +15,7 @@ class Post extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('posts/cover');
+        $this->addMediaCollection('posts/cover')->useDisk('public');
     }
 
     public $casts = [
