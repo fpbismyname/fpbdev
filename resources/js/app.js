@@ -21,7 +21,7 @@ if (!prefersReduced) {
             const run = () => {
                 if (el.dataset.revealed === '1') return
                 el.dataset.revealed = '1'
-                animate(el, { opacity: [0, 1], y: [16, 0] }, { duration: 0.55, ease: 'easeOut', delay })
+                animate(el, { opacity: [0, 1], y: [16, 0] }, { duration: 0.55, ease: [0.16, 1, 0.3, 1], delay })
             }
             // Generik above-the-fold: first section atau sudah di viewport saat boot → langsung tanpa nunggu inView
             if (isInFirstSection(el) || el.getBoundingClientRect().top < window.innerHeight * 0.9) {
@@ -40,7 +40,7 @@ if (!prefersReduced) {
                 animate(
                     [...group.children],
                     { opacity: [0, 1], y: [16, 0] },
-                    { duration: 0.55, ease: 'easeOut', delay: stagger(0.08, { startDelay: base }) },
+                    { duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: stagger(0.08, { startDelay: base }) },
                 )
             }
             if (isInFirstSection(group) || group.getBoundingClientRect().top < window.innerHeight * 0.9) {
@@ -60,7 +60,7 @@ if (!prefersReduced) {
             if (el.dataset.revealed) return
             el.dataset.revealed = '1'
             const delay = (parseFloat(el.dataset.revealDelay) || 0) / 1000
-            animate(el, { opacity: [0, 1] }, { duration: 0.4, ease: 'easeOut', delay })
+            animate(el, { opacity: [0, 1] }, { duration: 0.4, ease: [0.16, 1, 0.3, 1], delay })
         })
         document.querySelectorAll('[data-reveal-group]').forEach((group) => {
             if (group.dataset.revealed) return
@@ -69,7 +69,7 @@ if (!prefersReduced) {
             animate(
                 [...group.children],
                 { opacity: [0, 1] },
-                { duration: 0.4, ease: 'easeOut', delay: stagger(0.06, { startDelay: base }) },
+                { duration: 0.4, ease: [0.16, 1, 0.3, 1], delay: stagger(0.06, { startDelay: base }) },
             )
         })
     }
