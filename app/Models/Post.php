@@ -22,7 +22,7 @@ class Post extends Model implements HasMedia
     public function registerMediaConversions(?Media $media = null): void
     {
         $this->addMediaConversion('thumb')->width(400)->height(225)->sharpen(10)->nonQueued();
-        $this->addMediaConversion('preview')->width(800)->height(450)->sharpen(5)->withResponsiveImages()->nonQueued();
+        $this->addMediaConversion('preview')->width(800)->height(450)->sharpen(5)->nonQueued();
     }
 
     public $casts = [

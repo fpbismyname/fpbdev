@@ -27,7 +27,11 @@ class PostForm
                     ->required(),
                 SpatieMediaLibraryFileUpload::make('cover')
                     ->columnSpanFull()
-                    ->collection('posts/cover'),
+                    ->collection('posts/cover')
+                    ->disk('public')
+                    ->visibility('public')
+                    ->image()
+                    ->maxSize(5120),
                 Textarea::make('excerpt')
                     ->required()
                     ->columnSpanFull(),
