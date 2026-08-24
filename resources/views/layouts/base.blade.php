@@ -66,7 +66,38 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#7c31cf">
 
-    <script type="application/ld+json">{!! json_encode(['@context' => 'https://schema.org','@type' => 'Organization','name' => settings('name', config('app.name')),'url' => config('app.url'),'logo' => settings('media.site_logo.original_url') ?: config('app.url').'/favicon-32x32.png','description' => settings('description', config('app.name'))], JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
+    @php
+        $schemaOrg = [
+            '@context' => 'https://schema.org',
+            '@type' => 'ProfessionalService',
+            '@id' => rtrim(config('app.url'), '/').'/#organization',
+            'name' => settings('name', config('app.name')),
+            'url' => config('app.url'),
+            'logo' => settings('media.site_logo.original_url') ?: rtrim(config('app.url'), '/').'/favicon-32x32.png',
+            'description' => settings('description', config('app.name')),
+            'address' => [
+                '@type' => 'PostalAddress',
+                'streetAddress' => settings('contact.alamat', 'Cianjur, Jawa Barat, Indonesia.'),
+                'addressLocality' => 'Cianjur',
+                'addressRegion' => 'Jawa Barat',
+                'postalCode' => '43292',
+                'addressCountry' => 'ID',
+            ],
+            'telephone' => settings('contact.whatsapp', settings('contact.telepon')),
+            'email' => settings('contact.email'),
+            'openingHours' => settings('contact.jam-operasional'),
+            'areaServed' => ['Cianjur', 'Bandung', 'Jabodetabek', 'Yogyakarta', 'Surabaya'],
+            'sameAs' => collect(settings('social_media') ?? [])->pluck('url')->filter()->values()->all(),
+        ];
+        $schemaOrg = array_filter($schemaOrg, fn ($v) => ! is_null($v) && $v !== '' && $v !== []);
+        if (empty($schemaOrg['sameAs'])) {
+            unset($schemaOrg['sameAs']);
+        }
+        if (empty($schemaOrg['address']['streetAddress'])) {
+            unset($schemaOrg['address']);
+        }
+    @endphp
+    <script type="application/ld+json">{!! json_encode($schemaOrg, JSON_UNESCAPED_SLASHES|JSON_UNESCAPED_UNICODE) !!}</script>
 
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fonts
