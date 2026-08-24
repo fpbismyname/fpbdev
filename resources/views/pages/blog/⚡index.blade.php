@@ -97,9 +97,9 @@ new #[Layout('layouts::base'), Title('Blog')] class extends Component {
                                 </div>
                                 <div
                                     class="relative order-first lg:order-last aspect-16/10 lg:aspect-auto lg:h-full lg:min-h-72">
-                                    @if ($featured->getFirstMediaUrl('posts/cover'))
-                                        <img src="{{ $featured->getFirstMediaUrl('posts/cover') }}" alt="{{ $featured->title }}"
-                                            class="absolute inset-0 w-full h-full object-center object-cover" loading="lazy" decoding="async" />
+                                    @if ($featured->getFirstMediaUrl('posts/cover', 'preview'))
+                                        <img src="{{ $featured->getFirstMediaUrl('posts/cover', 'preview') }}" srcset="{{ $featured->getFirstMedia('posts/cover')?->getSrcset('preview') }}" alt="{{ $featured->title }}"
+                                            class="absolute inset-0 w-full h-full object-center object-cover" loading="lazy" decoding="async" sizes="(max-width: 1024px) 100vw, 33vw" />
                                     @else
                                         <div
                                             class="absolute inset-4 bg-primary/5 border border-dashed border-primary/30 rounded-box grid place-items-center">
@@ -120,9 +120,9 @@ new #[Layout('layouts::base'), Title('Blog')] class extends Component {
                                         <x-card
                                             class="h-full bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
                                             <x-slot:figure class="aspect-4/3">
-                                                @if ($post->getFirstMediaUrl('posts/cover'))
-                                                    <img src="{{ $post->getFirstMediaUrl('posts/cover') }}" alt="{{ $post->title }}"
-                                                        class="w-full h-full object-center object-cover" loading="lazy" decoding="async" />
+                                                @if ($post->getFirstMediaUrl('posts/cover', 'thumb'))
+                                                    <img src="{{ $post->getFirstMediaUrl('posts/cover', 'thumb') }}" srcset="{{ $post->getFirstMedia('posts/cover')?->getSrcset('thumb') }}" alt="{{ $post->title }}"
+                                                        class="w-full h-full object-center object-cover" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 33vw" />
                                                 @else
                                                     <div
                                                         class="w-full h-full bg-primary/5 border border-dashed border-primary/30 grid place-items-center">

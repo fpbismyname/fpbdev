@@ -38,7 +38,7 @@ new class extends Component {
                 <x-card class="bg-base-200 border border-base-content/15 transition-colors duration-200 hover:border-primary">
                     <x-slot:figure>
                         @if ($imageItem)
-                            <img src="{{ $imageItem->getUrl() }}" alt="{{ $item->name }}" class="w-full aspect-4/3 object-cover" loading="lazy" decoding="async" />
+                            <img src="{{ $imageItem->getUrl('thumb') }}" srcset="{{ $imageItem->getSrcset('preview') }}" alt="{{ $item->name }}" class="w-full aspect-4/3 object-cover" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 33vw" />
                         @else
                             <div class="w-full aspect-4/3 bg-base-300 grid place-items-center">
                                 <x-icon name="o-photo" class="w-8 h-8 text-base-content/30" />

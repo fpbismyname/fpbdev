@@ -20,7 +20,7 @@ new class extends Component {
             $imageItem = $this->portfolio->getMedia('portfolio')->first();
         @endphp
         @if ($imageItem)
-            <img src="{{ $imageItem->getUrl() }}" alt="{{ $this->portfolio->name }}" class="w-full h-full object-center object-cover" loading="lazy" decoding="async" />
+            <img src="{{ $imageItem->getUrl('thumb') }}" srcset="{{ $imageItem->getSrcset('preview') }}" alt="{{ $this->portfolio->name }}" class="w-full h-full object-center object-cover" loading="lazy" decoding="async" sizes="(max-width: 768px) 100vw, 33vw" />
         @else
             <div class="w-full h-full grid place-items-center bg-primary text-primary-content">
                 <x-icon name="o-photo" class="w-8 h-8" />
