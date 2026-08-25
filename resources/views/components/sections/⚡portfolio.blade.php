@@ -18,24 +18,32 @@ new class extends Component {
 };
 ?>
 
-<section id="portfolio" class="relative py-12 md:py-16 lg:py-24 scroll-mt-24">
-    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col gap-8">
-            <div class="max-w-2xl mx-auto text-center">
-                <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
-                <h2 class="text-2xl sm:text-3xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">{{ $site_content['headline'] }}</h2>
-                <p class="text-base sm:text-lg mb-8 text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
-            </div>
+<div>
+    @php
+        $portfolios = $this->listPortfolio();
+    @endphp
+
+    @if ($portfolios->isNotEmpty())
+    <section id="portfolio" class="relative py-12 md:py-16 lg:py-24 scroll-mt-24">
+        <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col gap-8">
-                <div class="grid lg:grid-cols-3 gap-8" data-reveal-group data-reveal-delay="280">
-                    @foreach ($this->listPortfolio() as $item)
-                        <livewire:ui.portfolio-card :portfolio="$item" wire:key="portfolio-{{ $item->id }}" />
-                    @endforeach
+                <div class="max-w-2xl mx-auto text-center">
+                    <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
+                    <h2 class="text-2xl sm:text-3xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">{{ $site_content['headline'] }}</h2>
+                    <p class="text-base sm:text-lg mb-8 text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
                 </div>
-                <div class="flex justify-center" data-reveal data-reveal-delay="520">
-                    <x-button link="/portfolio" label="Lihat Selengkapnya" class="btn-primary" />
+                <div class="flex flex-col gap-8">
+                    <div class="grid lg:grid-cols-3 gap-8" data-reveal-group data-reveal-delay="280">
+                        @foreach ($portfolios as $item)
+                            <livewire:ui.portfolio-card :portfolio="$item" wire:key="portfolio-{{ $item->id }}" />
+                        @endforeach
+                    </div>
+                    <div class="flex justify-center" data-reveal data-reveal-delay="520">
+                        <x-button link="/portfolio" label="Lihat Selengkapnya" class="btn-primary" />
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    @endif
+</div>

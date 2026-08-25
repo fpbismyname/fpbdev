@@ -18,6 +18,13 @@ beforeEach(function () {
 });
 
 test('home page renders every section', function () {
+    Portfolio::create([
+        'name' => 'Portfolio Home',
+        'slug' => 'portfolio-home',
+        'description' => 'Deskripsi portfolio untuk home.',
+        'client' => 'Client Home',
+    ]);
+
     $this->get('/')
         ->assertOk()
         ->assertSee('id="hero"', false)
@@ -30,6 +37,12 @@ test('home page renders every section', function () {
         ->assertSee('id="contact"', false)
         ->assertSee('Lihat Selengkapnya')
         ->assertSee('href="/portfolio"', false);
+});
+
+test('home page hides portfolio section when no projects exist', function () {
+    $this->get('/')
+        ->assertOk()
+        ->assertDontSee('id="portfolio"', false);
 });
 
 test('home page renders footer and navbar', function () {
