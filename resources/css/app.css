@@ -26,6 +26,7 @@
     h5,
     h6 {
         @apply font-bold font-display tracking-wide leading-tight;
+        text-wrap: balance;
     }
 }
 
@@ -34,7 +35,7 @@
 }
 
 .badge-hero {
-    @apply badge-lg badge-primary mb-4 badge-ghost border border-base-content/15;
+    @apply badge-lg mb-4 badge-ghost border border-base-content/15;
 }
 
 /**

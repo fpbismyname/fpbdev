@@ -12,15 +12,15 @@ new class extends Component {
 };
 ?>
 
-<section id="about" class="relative py-24">
-    <div class="container mx-auto max-w-7xl px-4">
-        <div class="flex flex-col gap-12">
+<section id="about" class="relative py-12 md:py-16 lg:py-24 scroll-mt-24">
+    <div class="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col gap-8 lg:gap-12">
             <div class="max-w-2xl mx-auto text-center">
                 <x-badge value="{{ $site_content['badge'] }}" class="badge-section" data-reveal />
-                <h2 class="text-4xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">
+                <h2 class="text-2xl sm:text-3xl lg:text-5xl font-black tracking-wide mb-4" data-reveal data-reveal-delay="80">
                     {{ $site_content['headline'] }}
                 </h2>
-                <p class="text-lg text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
+                <p class="text-base sm:text-lg text-base-content/75" data-reveal data-reveal-delay="160">{{ $site_content['subheadline'] }}</p>
             </div>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" data-reveal-group data-reveal-delay="240">
                 @foreach ($site_content['points'] as $point)
