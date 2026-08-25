@@ -1,15 +1,14 @@
 <?php
 
+use App\Livewire\Attributes\Description;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::base'), Title('Tentang Kami')] class extends Component {
+new #[Layout('layouts::base'), Title('Tentang Kami'), Description('site_content.pages.index.about.subheadline')] class extends Component {
     //
 };
 ?>
-
-<x-slot:description>{{ config('site_content.pages.index.about.subheadline') }}</x-slot:description>
 
 <main>
     <livewire:sections.about />

@@ -1,11 +1,12 @@
 <?php
 
+use App\Livewire\Attributes\Description;
 use App\Models\Portfolio;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::base'), Title('Portfolio')] class extends Component {
+new #[Layout('layouts::base'), Title('Portfolio'), Description('site_content.pages.index.portfolio.subheadline')] class extends Component {
     public $site_content;
 
     public function mount()
@@ -19,8 +20,6 @@ new #[Layout('layouts::base'), Title('Portfolio')] class extends Component {
     }
 };
 ?>
-
-<x-slot:description>{{ config('site_content.pages.index.portfolio.subheadline') }}</x-slot:description>
 
 <main>
     <section @class(['relative', 'py-24'])>

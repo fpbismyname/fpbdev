@@ -1,16 +1,14 @@
 <?php
 
+use App\Livewire\Attributes\Description;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 
-new #[Layout('layouts::base'), Title('Buat Bisnis Rental Mobil Tampil Profesional')] class extends Component {
+new #[Layout('layouts::base'), Title('Buat Bisnis Rental Mobil Anda Tampil Lebih Profesional'), Description('site_content.pages.index.hero.subheadline')] class extends Component {
     //
 };
 ?>
-
-<x-slot:description>Tampilkan armada, harga, dan informasi rental dalam satu website yang mudah digunakan. Pelanggan
-    dapat melihat pilihan kendaraan dan langsung menghubungi Anda melalui WhatsApp.</x-slot:description>
 
 <main>
     <livewire:sections.hero />

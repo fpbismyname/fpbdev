@@ -2,12 +2,13 @@
 
 use App\Enums\PostStatus;
 use App\Models\Post;
+use App\Livewire\Attributes\Description;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-new #[Layout('layouts::base'), Title('Blog')] class extends Component {
+new #[Layout('layouts::base'), Title('Blog'), Description('site_content.pages.index.blog.subheadline')] class extends Component {
     use WithPagination;
 
     public $site_content;
@@ -33,8 +34,6 @@ new #[Layout('layouts::base'), Title('Blog')] class extends Component {
 }
 
 ?>
-
-<x-slot:description>Kumpulan artikel dan tips seputar pembuatan website bisnis, khususnya rental mobil.</x-slot:description>
 
 <main>
     <section @class(['relative', 'py-24'])>
