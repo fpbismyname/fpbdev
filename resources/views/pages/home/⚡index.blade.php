@@ -9,7 +9,8 @@ new #[Layout('layouts::base'), Title('Buat Bisnis Rental Mobil Tampil Profesiona
 };
 ?>
 
-<x-slot:description>Tampilkan armada, harga, dan informasi rental dalam satu website yang mudah digunakan. Pelanggan dapat melihat pilihan kendaraan dan langsung menghubungi Anda melalui WhatsApp.</x-slot:description>
+<x-slot:description>Tampilkan armada, harga, dan informasi rental dalam satu website yang mudah digunakan. Pelanggan
+    dapat melihat pilihan kendaraan dan langsung menghubungi Anda melalui WhatsApp.</x-slot:description>
 
 <main>
     <livewire:sections.hero />
